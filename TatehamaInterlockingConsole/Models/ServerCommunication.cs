@@ -105,7 +105,8 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns>認証に成功した場合true、失敗した場合false</returns>
         private async Task<bool> InteractiveAuthenticateAsync()
         {
-            return await InteractiveAuthenticateAsync(CancellationToken.None);
+            using var source = new CancellationTokenSource(TimeSpan.FromSeconds(90));
+            return await InteractiveAuthenticateAsync(source.Token);
         }
 
         /// <summary>
