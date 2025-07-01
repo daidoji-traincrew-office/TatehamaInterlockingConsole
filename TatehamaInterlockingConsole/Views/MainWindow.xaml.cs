@@ -3,6 +3,7 @@ using System.Windows;
 using OpenIddict.Client;
 using TatehamaInterlockingConsole.Models;
 using TatehamaInterlockingConsole.ViewModels;
+using static TatehamaInterlockingConsole.App;
 
 namespace TatehamaInterlockingConsole.Views
 {
@@ -32,7 +33,7 @@ namespace TatehamaInterlockingConsole.Views
                 Topmost = true;
             }
             // ユーザー認証・初期化
-            await _serverCommunication.AuthenticateAsync();
+            await _serverCommunication.Authorize();
         }
 
         private async void Window_Closing(object sender, CancelEventArgs e)
