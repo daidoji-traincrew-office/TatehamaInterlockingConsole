@@ -243,7 +243,7 @@ namespace TatehamaInterlockingConsole.Models
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
 
-            _connection.Reconnecting += async(exception) =>
+            _connection.Closed += async(exception) =>
             {
                 Debug.WriteLine("Disconnected");
                 // サーバー接続状態を更新
