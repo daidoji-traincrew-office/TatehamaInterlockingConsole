@@ -28,7 +28,7 @@ namespace TatehamaInterlockingConsole.Models
         private static HubConnection _connection;
         private static bool _isUpdateLoopRunning = false;
         private const string HubConnectionName = "interlocking";
-        
+
         private string _token = "";
         private string _refreshToken = "";
         private DateTimeOffset _tokenExpiration = DateTimeOffset.MinValue;
@@ -73,7 +73,7 @@ namespace TatehamaInterlockingConsole.Models
                 await timer;
             }
         }
-        
+
         /// <summary>
         /// インタラクティブ認証を行い、SignalR接続を試みる
         /// </summary>
@@ -244,13 +244,13 @@ namespace TatehamaInterlockingConsole.Models
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
 
-            _connection.Closed += async(exception) =>
+            _connection.Closed += async (exception) =>
             {
                 Debug.WriteLine("Disconnected");
                 // サーバー接続状態を更新
                 _dataManager.ServerConnected = false;
                 ConnectionStatusChanged?.Invoke(false);
-                
+
                 // 例外が発生していない場合(=正常終了時)は何もしない
                 if (exception == null)
                 {
@@ -259,7 +259,7 @@ namespace TatehamaInterlockingConsole.Models
 
                 // 例外が発生した場合はログに出力し再接続
                 Debug.WriteLine($"Exception: {exception.Message}\nStackTrace: {exception.StackTrace}");
-                
+
                 // 再接続処理を開始
                 await TryReconnectAsync();
             };
@@ -359,7 +359,7 @@ namespace TatehamaInterlockingConsole.Models
 
             // リフレッシュトークンが無効な場合、再認証が必要
             Debug.WriteLine("Refresh token is invalid or expired.");
-            var result = CustomMessage.Show("トークンが切れました。\n再認証してください。", "認証失敗", 
+            var result = CustomMessage.Show("トークンが切れました。\n再認証してください。", "認証失敗",
                 MessageBoxButton.YesNo, MessageBoxImage.Error);
             if (result == MessageBoxResult.Yes)
             {
@@ -597,18 +597,19 @@ namespace TatehamaInterlockingConsole.Models
                         // コントロール更新処理
                         _dataUpdateViewModel.UpdateControl(_dataManager.DataFromServer);
 
-                        
+                        return isResult;
                     }
                     else
                     {
                         Debug.WriteLine("Failed to receive Data.");
+                        return false;
                     }
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine($"Error server receiving: {ex.Message}{ex.StackTrace}");
+                    return false;
                 }
-                return true;
             }
             catch (Exception exception)
             {
