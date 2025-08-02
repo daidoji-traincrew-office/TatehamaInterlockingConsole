@@ -54,6 +54,12 @@ namespace TatehamaInterlockingConsole.ViewModels
             }
         }
 
+        private string serverType;
+        /// <summary>
+        /// サーバー種類
+        /// </summary>
+        public string ServerType { get => serverType; set => SetProperty(ref serverType, value); }
+
         /// <summary>
         /// 時刻を1時間進めるコマンド
         /// </summary>
@@ -161,6 +167,9 @@ namespace TatehamaInterlockingConsole.ViewModels
                     _sound.SoundInit();
                     Volume = 100;
                     VolumeText = $"音量: {Volume}%";
+
+                    // サーバー種類の設定
+                    ServerType = ServerAddress.SignalAddress.Contains("dev") ? "Dev" : "Prod";
                 }
             }
             catch (Exception ex)
@@ -261,7 +270,7 @@ namespace TatehamaInterlockingConsole.ViewModels
         public bool ConfirmClose()
         {
             var result = CustomMessage.Show("全ての連動盤を閉じます。よろしいですか？",
-                "終了確認", 
+                "終了確認",
                 MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
 

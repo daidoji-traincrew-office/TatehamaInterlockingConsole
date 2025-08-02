@@ -23,9 +23,9 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="608"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="508"/>
+            <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -53,10 +53,16 @@
             <!-- 最前面表示チェックボックス -->
             <CheckBox Content="最前面表示" IsChecked="{Binding IsTopMost}" Command="{Binding CheckTopMostCommand}" Margin="20,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Foreground="White"/>
             <!-- 通信ステータス -->
-            <TextBlock Text="{Binding ConnectionStatus, Converter={StaticResource BoolToTextConverter}}"
-                      Width="150" Height="30" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Margin="10"
-                      Foreground="{Binding ConnectionStatus, Converter={StaticResource BoolToForeColorConverter}}"
-                      Background="{Binding ConnectionStatus, Converter={StaticResource BoolToBackColorConverter}}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="{Binding ServerType}"
+                           Width="50" Height="30" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Margin="5"
+                           Foreground="{Binding ConnectionStatus, Converter={StaticResource BoolToForeColorConverter}}"
+                           Background="{Binding ConnectionStatus, Converter={StaticResource BoolToBackColorConverter}}"/>
+                <TextBlock Text="{Binding ConnectionStatus, Converter={StaticResource BoolToTextConverter}, ConverterParameter='オンライン,オフライン'}"
+                           Width="150" Height="30" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" Margin="5"
+                           Foreground="{Binding ConnectionStatus, Converter={StaticResource BoolToForeColorConverter}}"
+                           Background="{Binding ConnectionStatus, Converter={StaticResource BoolToBackColorConverter}}"/>
+            </StackPanel>
         </StackPanel>
 
         <Viewbox Stretch="Uniform" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="1">
