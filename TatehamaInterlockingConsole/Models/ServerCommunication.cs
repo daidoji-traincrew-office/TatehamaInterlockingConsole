@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net;
@@ -257,6 +258,9 @@ namespace TatehamaInterlockingConsole.Models
                     return;
                 }
 
+                // 例外が発生した場合はファイルにログを出力
+                LogDisconnectionException(exception);
+                
                 // 例外が発生した場合はログに出力し再接続
                 Debug.WriteLine($"Exception: {exception.Message}\nStackTrace: {exception.StackTrace}");
 
@@ -696,6 +700,42 @@ namespace TatehamaInterlockingConsole.Models
             await DisposeAndStopConnectionAsync(CancellationToken.None);
             _dataManager.ServerConnected = false;
             ConnectionStatusChanged?.Invoke(false);
+        }
+
+        /// <summary>
+        /// 接続切断時の例外ログをファイルに出力
+        /// </summary>
+        /// <param name="exception">発生した例外</param>
+        private void LogDisconnectionException(Exception exception)
+        {
+            try
+            {
+                // logsディレクトリが存在しない場合は作成
+                const string logsDirectory = "logs";
+                if (!Directory.Exists(logsDirectory))
+                {
+                    Directory.CreateDirectory(logsDirectory);
+                }
+
+                // ファイル名を生成（YYYYMMDDhhmmss.log）
+                var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                var logFilePath = Path.Combine(logsDirectory, $"{timestamp}.log");
+
+                // ログ内容を作成
+                var logContent = $"DateTime: {DateTime.Now:yyyy-MM-dd HH:mm:ss}\n" +
+                                $"ConnectionID: {_connection?.ConnectionId ?? "N/A"}\n" +
+                                $"Message: {exception.Message}\n" +
+                                $"StackTrace: {exception.StackTrace}\n";
+
+                // ファイルに書き込み
+                File.WriteAllText(logFilePath, logContent);
+
+                Debug.WriteLine($"Disconnection exception logged to: {logFilePath}");
+            }
+            catch (Exception logException)
+            {
+                Debug.WriteLine($"Failed to log disconnection exception: {logException.Message}");
+            }
         }
 
         /// <summary>
