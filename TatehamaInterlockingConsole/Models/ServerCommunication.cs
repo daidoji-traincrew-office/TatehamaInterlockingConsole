@@ -35,6 +35,7 @@ namespace TatehamaInterlockingConsole.Models
         private DateTimeOffset _tokenExpiration = DateTimeOffset.MinValue;
         private bool _eventHandlersSet = false;
         private const int ReconnectIntervalMs = 500;
+        private string _connectionId = "";
 
         /// <summary>
         /// サーバー接続状態変更イベント
@@ -117,6 +118,10 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns>認証に成功した場合true、失敗した場合false</returns>
         private async Task<bool> InteractiveAuthenticateAsync(CancellationToken cancellationToken)
         {
+            if (ServerAddress.IsDebug)
+            {
+                return true;
+            }
             try
             {
                 // ブラウザで認証要求
@@ -244,6 +249,9 @@ namespace TatehamaInterlockingConsole.Models
             }
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
+            
+            // 接続成功時にConnectionIdを保存
+            _connectionId = _connection.ConnectionId ?? "";
 
             _connection.Closed += async (exception) =>
             {
@@ -380,6 +388,11 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns></returns>
         private async Task RefreshTokenAsync(CancellationToken cancellationToken)
         {
+            if(ServerAddress.IsDebug)
+            {
+                Debug.WriteLine("Debug mode, skipping token refresh.");
+                return;
+            }
             if (string.IsNullOrEmpty(_refreshToken))
             {
                 throw new InvalidOperationException("Refresh token is not set.");
@@ -720,10 +733,10 @@ namespace TatehamaInterlockingConsole.Models
                 // ファイル名を生成（YYYYMMDDhhmmss.log）
                 var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
                 var logFilePath = Path.Combine(logsDirectory, $"{timestamp}.log");
-
+                var connectionId = _connectionId.Length > 0 ? _connectionId : "N/A";
                 // ログ内容を作成
                 var logContent = $"DateTime: {DateTime.Now:yyyy-MM-dd HH:mm:ss}\n" +
-                                $"ConnectionID: {_connection?.ConnectionId ?? "N/A"}\n" +
+                                $"ConnectionID: {connectionId}\n" +
                                 $"Message: {exception.Message}\n" +
                                 $"StackTrace: {exception.StackTrace}\n";
 
