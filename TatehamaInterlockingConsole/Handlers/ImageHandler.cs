@@ -147,6 +147,7 @@ namespace TatehamaInterlockingConsole.Handlers
                     State = EnumData.ConvertToLCR(newIndex)
                 };
                 _ = _serverCommunication.SendLeverEventDataRequestToServerAsync(leverData);
+                LogManager.WriteLog($"てこ操作 : {leverData.Name} : {leverData.State}");
                 //CustomMessage.Show($"Name: {leverData.Name} State: {leverData.State}",
                 //    "サーバー送信",
                 //    System.Windows.MessageBoxButton.OK,
@@ -209,6 +210,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         IsKeyInserted = newKeyInserted
                     };
                     control.IsAuthentication = await _serverCommunication.SendKeyLeverEventDataRequestToServerAsync(keyLeverData);
+                    LogManager.WriteLog($"鍵てこ操作 : {keyLeverData.Name} : {keyLeverData.State} : 鍵{(keyLeverData.IsKeyInserted ? "挿入" : "抜取")}");
                     //CustomMessage.Show($"Name: {keyLeverData.Name} State: {keyLeverData.State} Key: {keyLeverData.IsKeyInserted}",
                     //    "サーバー送信",
                     //    System.Windows.MessageBoxButton.OK,
@@ -258,6 +260,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         IsKeyInserted = newKeyInserted
                     };
                     control.IsAuthentication = await _serverCommunication.SendKeyLeverEventDataRequestToServerAsync(keyLeverData);
+                    LogManager.WriteLog($"鍵てこ操作 : {keyLeverData.Name} : {keyLeverData.State} : 鍵{(keyLeverData.IsKeyInserted ? "挿入" : "抜取")}");
                     //CustomMessage.Show($"Name: {keyLeverData.Name} State: {keyLeverData.State} Key: {keyLeverData.IsKeyInserted}",
                     //    "サーバー送信",
                     //    System.Windows.MessageBoxButton.OK,
@@ -294,6 +297,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         OperatedAt = DateTime.Now
                     };
                     _ = _serverCommunication.SendButtonEventDataRequestToServerAsync(destinationButtonData);
+                    LogManager.WriteLog($"ボタン操作 : {destinationButtonData.Name} : {destinationButtonData.IsRaised}");
                     //CustomMessage.Show($"Name: {destinationButtonData.Name} State: {destinationButtonData.IsRaised}",
                     //    "サーバー送信",
                     //    System.Windows.MessageBoxButton.OK,
@@ -350,6 +354,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         OperatedAt = DateTime.Now
                     };
                     _ = _serverCommunication.SendButtonEventDataRequestToServerAsync(destinationButtonData);
+                    LogManager.WriteLog($"ボタン操作 : {destinationButtonData.Name} : {destinationButtonData.IsRaised}");
                     //CustomMessage.Show($"Name: {destinationButtonData.Name} State: {destinationButtonData.IsRaised}",
                     //    "サーバー送信",
                     //    System.Windows.MessageBoxButton.OK,
