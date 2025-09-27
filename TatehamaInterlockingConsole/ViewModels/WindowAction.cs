@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using TatehamaInterlockingConsole.Helpers;
@@ -36,6 +37,42 @@ namespace TatehamaInterlockingConsole.ViewModels
                     Title = titleText,
                     Topmost = DataManager.Instance.IsTopMost,
                 };
+
+                // ウィンドウ設定ファイル読み込み
+                var settingsPath = $"WindowSettings/{stationName}.txt";
+                if (File.Exists(settingsPath))
+                {
+                    var lines = File.ReadAllLines(settingsPath);
+                    foreach (var line in lines)
+                    {
+                        var parts = line.Split('=');
+                        if (parts.Length != 2) continue;
+                        var key = parts[0].Trim();
+                        var value = parts[1].Trim();
+                        switch (key)
+                        {
+                            case "Width":
+                                if (double.TryParse(value, out var w)) window.Width = w;
+                                break;
+                            case "Height":
+                                if (double.TryParse(value, out var h)) window.Height = h;
+                                break;
+                            case "Left":
+                                if (double.TryParse(value, out var l)) window.Left = l;
+                                break;
+                            case "Top":
+                                if (double.TryParse(value, out var t)) window.Top = t;
+                                break;
+                        }
+                    }
+                }
+                // 設定ファイルがない場合、デフォルトサイズを設定
+                else
+                {
+                    window.Width = 1280;
+                    window.Height = 720;
+                }
+
                 window.Show();
             }
             catch (Exception ex)
