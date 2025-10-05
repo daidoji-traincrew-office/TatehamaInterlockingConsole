@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net;
@@ -34,6 +35,7 @@ namespace TatehamaInterlockingConsole.Models
         private DateTimeOffset _tokenExpiration = DateTimeOffset.MinValue;
         private bool _eventHandlersSet = false;
         private const int ReconnectIntervalMs = 500;
+        private string _connectionId = "";
 
         /// <summary>
         /// サーバー接続状態変更イベント
@@ -116,6 +118,10 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns>認証に成功した場合true、失敗した場合false</returns>
         private async Task<bool> InteractiveAuthenticateAsync(CancellationToken cancellationToken)
         {
+            if (ServerAddress.IsDebug)
+            {
+                return true;
+            }
             try
             {
                 // ブラウザで認証要求
@@ -243,6 +249,9 @@ namespace TatehamaInterlockingConsole.Models
             }
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
+            
+            // 接続成功時にConnectionIdを保存
+            _connectionId = _connection.ConnectionId ?? "";
 
             _connection.Closed += async (exception) =>
             {
@@ -257,6 +266,9 @@ namespace TatehamaInterlockingConsole.Models
                     return;
                 }
 
+                // 例外が発生した場合はファイルにログを出力
+                LogDisconnectionException(exception);
+                
                 // 例外が発生した場合はログに出力し再接続
                 Debug.WriteLine($"Exception: {exception.Message}\nStackTrace: {exception.StackTrace}");
 
@@ -376,6 +388,11 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns></returns>
         private async Task RefreshTokenAsync(CancellationToken cancellationToken)
         {
+            if(ServerAddress.IsDebug)
+            {
+                Debug.WriteLine("Debug mode, skipping token refresh.");
+                return;
+            }
             if (string.IsNullOrEmpty(_refreshToken))
             {
                 throw new InvalidOperationException("Refresh token is not set.");
@@ -696,6 +713,42 @@ namespace TatehamaInterlockingConsole.Models
             await DisposeAndStopConnectionAsync(CancellationToken.None);
             _dataManager.ServerConnected = false;
             ConnectionStatusChanged?.Invoke(false);
+        }
+
+        /// <summary>
+        /// 接続切断時の例外ログをファイルに出力
+        /// </summary>
+        /// <param name="exception">発生した例外</param>
+        private void LogDisconnectionException(Exception exception)
+        {
+            try
+            {
+                // logsディレクトリが存在しない場合は作成
+                const string logsDirectory = "logs";
+                if (!Directory.Exists(logsDirectory))
+                {
+                    Directory.CreateDirectory(logsDirectory);
+                }
+
+                // ファイル名を生成（YYYYMMDDhhmmss.log）
+                var timestamp = DateTime.Now.ToString("yyyyMMddHHmmss");
+                var logFilePath = Path.Combine(logsDirectory, $"{timestamp}.log");
+                var connectionId = _connectionId.Length > 0 ? _connectionId : "N/A";
+                // ログ内容を作成
+                var logContent = $"DateTime: {DateTime.Now:yyyy-MM-dd HH:mm:ss}\n" +
+                                $"ConnectionID: {connectionId}\n" +
+                                $"Message: {exception.Message}\n" +
+                                $"StackTrace: {exception.StackTrace}\n";
+
+                // ファイルに書き込み
+                File.WriteAllText(logFilePath, logContent);
+
+                Debug.WriteLine($"Disconnection exception logged to: {logFilePath}");
+            }
+            catch (Exception logException)
+            {
+                Debug.WriteLine($"Failed to log disconnection exception: {logException.Message}");
+            }
         }
 
         /// <summary>
