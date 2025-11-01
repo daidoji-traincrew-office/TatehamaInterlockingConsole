@@ -22,8 +22,8 @@ Image	W21_PG		“]‚Ä‚ÂŠí•\¦“”		TH59_W21	N					822	45											"0,1"	0		"Image/Li
 Image	W21_PY		“]‚Ä‚ÂŠí•\¦“”		TH59_W21	R					856	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W21_Label	W21									14	20	11	11				21	10	Transparent	#FFBCBCBC	P21													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH59_81							1249	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH59_81							1247	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH59_81							1281	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH59_CHRNK							1247	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH59_CHRRK							1281	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 KeyImage	‰ğ•ú99		•¨—Œ®‚Ä‚±	TH59_99							1347	64										‰ğ•ú99	"0,1,10,11"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/KeyLever_KeyOFF_N.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_N.png,Image/Lever/KeyLever_KeyON_R.png"	•ûŒü‚Ä‚±‰ğ•ú‚ÍNR								
 Image	‰ğ•ú99_PY		‰ğ•ú•\¦“”	TH59_99							1362	31											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 Image	TH61_5RT_1		‹O“¹‰ñ˜H•\¦“”	TH61_5RT							52	198											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								

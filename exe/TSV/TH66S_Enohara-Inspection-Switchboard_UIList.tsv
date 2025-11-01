@@ -246,8 +246,8 @@ Image	W78_PG										99	510											"0,1"	0		"Image/Light_dummy/N.png,Image/L
 Image	W78_PY										133	510											"0,1"	0		"Image/Light_dummy/N.png,Image/Light_dummy/PY.png"	ƒ_ƒ~[								
 TextBlock	W78_Label	W78									14	20	11	11				78	10	Transparent	#FFBCBCBC						ƒ_ƒ~[								
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH66S_81							1827	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH66S_81							1825	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH66S_81							1859	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH66_CHRNK							1825	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH66_CHRRK							1859	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 																																			
 																																			
 																																			

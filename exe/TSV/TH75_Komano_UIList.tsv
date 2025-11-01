@@ -144,8 +144,8 @@ Image	W50_PG		“]‚Ä‚ÂŠí•\¦“”		TH75_W50	N					2181	45											"0,1"	0		"Image/L
 Image	W50_PY		“]‚Ä‚ÂŠí•\¦“”		TH75_W50	R					2215	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W50_Label	W50									14	20	11	11				50	10	Transparent	#FFBCBCBC	P50													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH75_81							2367	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH75_81							2365	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH75_81							2399	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH75_CHRNK							2365	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH75_CHRRK							2399	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 Image	TH76_5LAT_1		‹O“¹‰ñ˜H•\¦“”	TH76_5LAT							126	548											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								
 Image	TH76_5LAT_2		‹O“¹‰ñ˜H•\¦“”	TH76_5LAT							208	548											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
 Image	TH76_5LBT_1		‹O“¹‰ñ˜H•\¦“”	TH76_5LBT							126	668											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
