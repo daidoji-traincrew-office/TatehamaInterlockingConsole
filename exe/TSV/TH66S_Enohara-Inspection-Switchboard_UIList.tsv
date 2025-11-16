@@ -23,11 +23,11 @@ LeverImage	14R		物理てこ	TH66S_14							1440	667										14R	"0,1"	0	Image/Leve
 TextBlock	14R_Label	14R									14	20	11	11				14	10	Transparent	#FFBCBCBC	14R													
 LeverImage	15L		物理てこ	TH66S_15							1646	667										15L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 TextBlock	15L_Label	15L									14	20	11	11				15	10	Transparent	#FFBCBCBC	15L													
-LeverImage	15LZ		物理てこ								1704	667										15LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"	10代XZ=てこ黄(X)N(X)Z　例：15LZ=てこ黄LN								
+LeverImage	15LZ		物理てこ	TH66S_15Z							1704	667										15LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"	10代XZ=てこ黄(X)N(X)Z　例：15LZ=てこ黄LN								
 TextBlock	15LZ_Label	15LZ									14	20	11	11				15Z	10	Transparent	#FFBCBCBC	15LZ													
 LeverImage	16L		物理てこ	TH66S_16							1646	717										16L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 TextBlock	16L_Label	16L									14	20	11	11				16	10	Transparent	#FFBCBCBC	16L													
-LeverImage	16LZ		物理てこ								1704	717										16LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	16LZ		物理てこ	TH66S_16Z							1704	717										16LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 TextBlock	16LZ_Label	16LZ									14	20	11	11				16Z	10	Transparent	#FFBCBCBC	16LZ													
 LeverImage	21R										928	267											"0,1"	0	Image/Lever_dummy/LeverBase_NR.png	"Image/Lever_dummy/Lever_Green_N.png,Image/Lever_dummy/Lever_Green_R.png"	ダミー								
 TextBlock	21R_Label	21R									14	20	11	11				21	10	Transparent	#FFBCBCBC						ダミー								
@@ -55,15 +55,15 @@ LeverImage	33R										477	217											"0,1"	0	Image/Lever_dummy/LeverBase_NR
 TextBlock	33R_Label	33R									14	20	11	11				33	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	34L										1419	117											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	34L_Label	34L									14	20	11	11				34	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	34LZ										1477	117											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
+LeverImage	34LZ			TH66S_34Z							1477	117											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
 TextBlock	34LZ_Label	34LZ									14	20	11	11				34Z	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	35L										1419	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	35L_Label	35L									14	20	11	11				35	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	35LZ										1477	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
+LeverImage	35LZ			TH66S_35Z							1477	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
 TextBlock	35LZ_Label	35LZ									14	20	11	11				35Z	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	36L										1419	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	36L_Label	36L									14	20	11	11				36	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	36LZ										1477	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
+LeverImage	36LZ			TH66S_36Z							1477	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
 TextBlock	36LZ_Label	36LZ									14	20	11	11				36Z	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	37L										1477	367											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	37L_Label	37L									14	20	11	11				37	10	Transparent	#FFBCBCBC						ダミー								
@@ -75,15 +75,15 @@ LeverImage	40L										1477	517											"-1,0"	0	Image/Lever_dummy/LeverBase_
 TextBlock	40L_Label	40L									14	20	11	11				40	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	41L										886	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	41L_Label	41L									14	20	11	11				41	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	41LZ										944	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
+LeverImage	41LZ			TH66S_41Z							944	217											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
 TextBlock	41LZ_Label	41LZ									14	20	11	11				41Z	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	42L										886	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Green_L.png,Image/Lever_dummy/Lever_Green_N.png"	ダミー								
 TextBlock	42L_Label	42L									14	20	11	11				42	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	42LZ										944	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
+LeverImage	42LZ			TH66S_42Z							944	167											"-1,0"	0	Image/Lever_dummy/LeverBase_LN.png	"Image/Lever_dummy/Lever_Yellow_L.png,Image/Lever_dummy/Lever_Yellow_N.png"	ダミー								
 TextBlock	42LZ_Label	42LZ									14	20	11	11				42Z	10	Transparent	#FFBCBCBC						ダミー								
 LeverImage	43R										808	167											"0,1"	0	Image/Lever_dummy/LeverBase_NR.png	"Image/Lever_dummy/Lever_Green_N.png,Image/Lever_dummy/Lever_Green_R.png"	ダミー								
 TextBlock	43R_Label	43R									14	20	11	11				43	10	Transparent	#FFBCBCBC						ダミー								
-LeverImage	43RZ										750	167											"0,1"	0	Image/Lever_dummy/LeverBase_NR.png	"Image/Lever_dummy/Lever_Yellow_N.png,Image/Lever_dummy/Lever_Yellow_R.png"	ダミー								
+LeverImage	43RZ			TH66S_43Z							750	167											"0,1"	0	Image/Lever_dummy/LeverBase_NR.png	"Image/Lever_dummy/Lever_Yellow_N.png,Image/Lever_dummy/Lever_Yellow_R.png"	ダミー								
 TextBlock	43RZ_Label	43RZ									14	20	11	11				43Z	10	Transparent	#FFBCBCBC						ダミー								
 ButtonImage	A		着点ボタン	TH66S_AP							1762	680										A	"0,1"	0	Image/Button/ArrivalButton_Base.png	"Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png"									
 TextBlock	A_Label	A									5	23	15	12				A	10	Transparent	#FFBCBCBC	A													
