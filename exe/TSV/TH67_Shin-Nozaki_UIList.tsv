@@ -16,13 +16,13 @@ TextBlock	3L_Label	3L									14	20	11	11				3	10	Transparent	#FFBCBCBC	3L
 LeverImage	4L		物理てこ	TH67_4							974	326										4L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
 Image	4L_G		信号機表示灯	新野崎下り場内4L							898	369											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	4L_Label	4L									14	20	11	11				4	10	Transparent	#FFBCBCBC	4L													
-LeverImage	4LZ		物理てこ								1032	326										4LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"	0代XZ=てこ桃(X)N(X)Z　例：4LZ=てこ桃LN								
+LeverImage	4LZ		物理てこ	TH67_4Z							1032	326										4LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"	0代XZ=てこ桃(X)N(X)Z　例：4LZ=てこ桃LN								
 Image	4LZ_Y		信号機表示灯								1047	315											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	4LZ_Label	4LZ									14	20	11	11				4Z	10	Transparent	#FFBCBCBC	4LZ													
 LeverImage	5L		物理てこ	TH67_5							974	440										5L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
 Image	5L_G		信号機表示灯	新野崎下り場内5L							898	414											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	5L_Label	5L									14	20	11	11				5	10	Transparent	#FFBCBCBC	5L													
-LeverImage	5LZ		物理てこ								1032	440										5LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
+LeverImage	5LZ		物理てこ	TH67_5Z							1032	440										5LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
 Image	5LZ_Y		信号機表示灯								1047	429											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	5LZ_Label	5LZ									14	20	11	11				5Z	10	Transparent	#FFBCBCBC	5LZ													
 LeverImage	6R		物理てこ	TH67_6							858	326										6R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png"									
