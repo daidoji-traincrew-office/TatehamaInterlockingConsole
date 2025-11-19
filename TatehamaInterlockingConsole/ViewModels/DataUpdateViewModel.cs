@@ -679,8 +679,8 @@ namespace TatehamaInterlockingConsole.ViewModels
         /// <param name="retsuban"></param>
         private void UpdateRetsuban(UIControlSetting item, DatabaseOperational.RetsubanData retsuban)
         {
-            if (retsuban != null)
-                item.Retsuban = retsuban.Retsuban;
+            if (string.IsNullOrEmpty(retsuban?.Retsuban))
+                item.Retsuban = "溝月レイル";
             else
                 item.Retsuban = string.Empty;
         }
