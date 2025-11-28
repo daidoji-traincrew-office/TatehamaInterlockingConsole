@@ -97,8 +97,8 @@ Image	W36_PG		“]‚Ä‚ÂŠí•\¦“”		TH67_W36	N					1400	45											"0,1"	0		"Image/L
 Image	W36_PY		“]‚Ä‚ÂŠí•\¦“”		TH67_W36	R					1434	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W36_Label	W36									14	20	11	11				36	10	Transparent	#FFBCBCBC	P36													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH67_81							1827	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH67_81							1825	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH67_81							1859	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH67_CHRNK							1825	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH67_CHRRK							1859	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 Image	108T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è108T							52	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								
 Image	114T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è114T							82	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
 Image	120T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è120T							112	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
