@@ -9,19 +9,19 @@ TextBlock	1R_Label	1R									14	20	11	11				1	10	Transparent	#FFBCBCBC	1R
 LeverImage	2R		物理てこ	TH65_2							656	388										2R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png"									
 Image	2R_G		信号機表示灯	大道寺上り場内2R							722	387											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	2R_Label	2R									14	20	11	11				2	10	Transparent	#FFBCBCBC	2R													
-LeverImage	2RZ		物理てこ								608	388										2RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"	0代XZ=てこ桃(X)N(X)Z　例：2RZ=てこ桃NR								
+LeverImage	2RZ		物理てこ	TH65_2Z							608	388										2RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"	0代XZ=てこ桃(X)N(X)Z　例：2RZ=てこ桃NR								
 Image	2RZ_Y		信号機表示灯								623	377											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	2RZ_Label	2RZ									14	20	11	11				2Z	10	Transparent	#FFBCBCBC	2RZ													
 LeverImage	3R		物理てこ	TH65_3							656	448										3R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png"									
 Image	3R_G		信号機表示灯	大道寺上り場内3R							722	454											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	3R_Label	3R									14	20	11	11				3	10	Transparent	#FFBCBCBC	3R													
-LeverImage	3RZ		物理てこ								608	448										3RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"									
+LeverImage	3RZ		物理てこ	TH65_3Z							608	448										3RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"									
 Image	3RZ_Y		信号機表示灯								623	437											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	3RZ_Label	3RZ									14	20	11	11				3Z	10	Transparent	#FFBCBCBC	3RZ													
 LeverImage	4R		物理てこ	TH65_4							656	508										4R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png"									
 Image	4R_G		信号機表示灯	大道寺上り場内4R							722	560											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	4R_Label	4R									14	20	11	11				4	10	Transparent	#FFBCBCBC	4R													
-LeverImage	4RZ		物理てこ								608	508										4RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"									
+LeverImage	4RZ		物理てこ	TH65_4Z							608	508										4RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png"									
 Image	4RZ_Y		信号機表示灯								623	497											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	4RZ_Label	4RZ									14	20	11	11				4Z	10	Transparent	#FFBCBCBC	4RZ													
 LeverImage	5L		物理てこ	TH65_5							714	508										5L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
@@ -45,13 +45,13 @@ TextBlock	10R_Label	10R									14	20	11	11				10	10	Transparent	#FFBCBCBC	10R
 LeverImage	11L		物理てこ	TH65_11							1164	508										11L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
 Image	11L_G		信号機表示灯	大道寺下り場内11L							1117	551											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	11L_Label	11L									14	20	11	11				11	10	Transparent	#FFBCBCBC	11L													
-LeverImage	11LZ		物理てこ								1212	508										11LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
+LeverImage	11LZ		物理てこ	TH65_11Z							1212	508										11LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
 Image	11LZ_Y		信号機表示灯								1227	497											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	11LZ_Label	11LZ									14	20	11	11				11Z	10	Transparent	#FFBCBCBC	11LZ													
 LeverImage	12L		物理てこ	TH65_12							1164	622										12L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
 Image	12L_G		信号機表示灯	大道寺下り場内12L							1117	596											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 TextBlock	12L_Label	12L									14	20	11	11				12	10	Transparent	#FFBCBCBC	12L													
-LeverImage	12LZ		物理てこ								1212	622										12LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
+LeverImage	12LZ		物理てこ	TH65_12Z							1212	622										12LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png"									
 Image	12LZ_Y		信号機表示灯								1227	611											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	12LZ_Label	12LZ									14	20	11	11				12Z	10	Transparent	#FFBCBCBC	12LZ													
 LeverImage	13L		物理てこ	TH65_13							2370	388										13L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png"									
@@ -63,73 +63,73 @@ TextBlock	14L_Label	14L									14	20	11	11				14	10	Transparent	#FFBCBCBC	14L
 LeverImage	21R		物理てこ	TH65_21							1068	388										21R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"	20代X=てこ緑(X)N(X)　例：21R=てこ緑NR								
 Image	21R_Y		信号機表示灯	大道寺入換21R							1185	393											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	21R_Label	21R									14	20	11	11				21	10	Transparent	#FFBCBCBC	21R													
-LeverImage	21RZ		物理てこ								1010	388										21RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"	20代XZ=てこ黄(X)N(X)Z　例：2RZ=てこ黄NR								
+LeverImage	21RZ		物理てこ	TH65_21Z							1010	388										21RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"	20代XZ=てこ黄(X)N(X)Z　例：2RZ=てこ黄NR								
 Image	21RZ_Y		信号機表示灯								1025	377											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	21RZ_Label	21RZ									14	20	11	11				21Z	10	Transparent	#FFBCBCBC	21RZ													
 LeverImage	22R		物理てこ	TH65_22							1068	448										22R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	22R_Y		信号機表示灯	大道寺入換22R							1185	453											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	22R_Label	22R									14	20	11	11				22	10	Transparent	#FFBCBCBC	22R													
-LeverImage	22RZ		物理てこ								1010	448										22RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	22RZ		物理てこ	TH65_22Z							1010	448										22RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	22RZ_Y		信号機表示灯								1025	437											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	22RZ_Label	22RZ									14	20	11	11				22Z	10	Transparent	#FFBCBCBC	22RZ													
 LeverImage	23R		物理てこ	TH65_23							1058	508										23R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	23R_Y		信号機表示灯	大道寺入換23R							1165	567											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	23R_Label	23R									14	20	11	11				23	10	Transparent	#FFBCBCBC	23R													
-LeverImage	23RZ		物理てこ								1010	508										23RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	23RZ		物理てこ	TH65_23Z							1010	508										23RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	23RZ_Y		信号機表示灯								1025	497											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	23RZ_Label	23RZ									14	20	11	11				23Z	10	Transparent	#FFBCBCBC	23RZ													
 LeverImage	24R		物理てこ	TH65_24							1058	622										24R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	24R_Y		信号機表示灯	大道寺入換24R							1165	606											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	24R_Label	24R									14	20	11	11				24	10	Transparent	#FFBCBCBC	24R													
-LeverImage	24RZ		物理てこ								1010	622										24RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	24RZ		物理てこ	TH65_24Z							1010	622										24RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	24RZ_Y		信号機表示灯								1025	611											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	24RZ_Label	24RZ									14	20	11	11				24Z	10	Transparent	#FFBCBCBC	24RZ													
 LeverImage	25R		物理てこ	TH65_25							1106	686										25R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	25R_Y		信号機表示灯	大道寺入換25R							1165	691											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	25R_Label	25R									14	20	11	11				25	10	Transparent	#FFBCBCBC	25R													
-LeverImage	25RZ		物理てこ								1048	686										25RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	25RZ		物理てこ	TH65_25Z							1048	686										25RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	25RZ_Y		信号機表示灯								1063	675											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	25RZ_Label	25RZ									14	20	11	11				25Z	10	Transparent	#FFBCBCBC	25RZ													
 LeverImage	26R		物理てこ	TH65_26							1106	746										26R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	26R_Y		信号機表示灯	大道寺入換26R							1165	751											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	26R_Label	26R									14	20	11	11				26	10	Transparent	#FFBCBCBC	26R													
-LeverImage	26RZ		物理てこ								1048	746										26RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	26RZ		物理てこ	TH65_26Z							1048	746										26RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	26RZ_Y		信号機表示灯								1063	735											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	26RZ_Label	26RZ									14	20	11	11				26Z	10	Transparent	#FFBCBCBC	26RZ													
 LeverImage	27L		物理てこ	TH65_27							1260	508										27L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 Image	27L_Y		信号機表示灯	大道寺入換27L							1135	552											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	27L_Label	27L									14	20	11	11				27	10	Transparent	#FFBCBCBC	27L													
-LeverImage	27LZ		物理てこ								1308	508										27LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	27LZ		物理てこ	TH65_27Z							1308	508										27LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 Image	27LZ_Y		信号機表示灯								1323	497											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	27LZ_Label	27LZ									14	20	11	11				27Z	10	Transparent	#FFBCBCBC	27LZ													
 LeverImage	28L		物理てこ	TH65_28							1260	622										28L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 Image	28L_Y		信号機表示灯	大道寺入換28L							1135	597											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	28L_Label	28L									14	20	11	11				28	10	Transparent	#FFBCBCBC	28L													
-LeverImage	28LZ		物理てこ								1308	622										28LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	28LZ		物理てこ	TH65_28Z							1308	622										28LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 Image	28LZ_Y		信号機表示灯								1323	611											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	28LZ_Label	28LZ									14	20	11	11				28Z	10	Transparent	#FFBCBCBC	28LZ													
 LeverImage	29L		物理てこ	TH65_29							1704	448										29L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 Image	29L_Y		信号機表示灯	大道寺入換29L							1675	489											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	29L_Label	29L									14	20	11	11				29	10	Transparent	#FFBCBCBC	29L													
-LeverImage	29LZ		物理てこ								1752	448										29LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	29LZ		物理てこ	TH65_29Z							1752	448										29LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 Image	29LZ_Y		信号機表示灯								1767	437											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	29LZ_Label	29LZ									14	20	11	11				29Z	10	Transparent	#FFBCBCBC	29LZ													
 LeverImage	30R		物理てこ	TH65_30							1902	448										30R	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png"									
 Image	30R_Y		信号機表示灯	大道寺入換30R							1961	483											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	30R_Label	30R									14	20	11	11				30	10	Transparent	#FFBCBCBC	30R													
-LeverImage	30RZ		物理てこ								1854	448										30RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
+LeverImage	30RZ		物理てこ	TH65_30Z							1854	448										30RZ	"0,1"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png"									
 Image	30RZ_Y		信号機表示灯								1869	437											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	30RZ_Label	30RZ									14	20	11	11				30Z	10	Transparent	#FFBCBCBC	30RZ													
 LeverImage	31L		物理てこ	TH65_31							2054	388										31L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 Image	31L_Y		信号機表示灯	大道寺入換31L							2025	395											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	31L_Label	31L									14	20	11	11				31	10	Transparent	#FFBCBCBC	31L													
-LeverImage	31LZ		物理てこ								2102	388										31LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	31LZ		物理てこ	TH65_31Z							2102	388										31LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 Image	31LZ_Y		信号機表示灯								2117	377											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	31LZ_Label	31LZ									14	20	11	11				31Z	10	Transparent	#FFBCBCBC	31LZ													
 LeverImage	32L		物理てこ	TH65_32							2054	448										32L	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png"									
 Image	32L_Y		信号機表示灯	大道寺入換32L							2025	485											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	32L_Label	32L									14	20	11	11				32	10	Transparent	#FFBCBCBC	32L													
-LeverImage	32LZ		物理てこ								2102	448										32LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
+LeverImage	32LZ		物理てこ	TH65_32Z							2102	448										32LZ	"-1,0"	0	Image/Lever/LeverBase_LN.png	"Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png"									
 Image	32LZ_Y		信号機表示灯								2117	437											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 TextBlock	32LZ_Label	32LZ									14	20	11	11				32Z	10	Transparent	#FFBCBCBC	32LZ													
 ButtonImage	T		着点ボタン	TH65_TP							360	461										T	"0,1"	0	Image/Button/ArrivalButton_Base.png	"Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png"									
