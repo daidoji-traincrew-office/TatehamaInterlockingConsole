@@ -184,7 +184,7 @@ namespace TatehamaInterlockingConsole.ViewModels
                             }
                             break;
                         case "駅扱切換表示灯":
-                            UpdateStationSwitchIndicator(item, physicalKeyLever);
+                            UpdateStationSwitchIndicator(item, lamp);
                             break;
                         case "解放表示灯":
                             if (physicalKeyLever != null)
@@ -411,6 +411,16 @@ namespace TatehamaInterlockingConsole.ViewModels
             {
                 item.ImageIndex = trackCircuit?.On == true ? 2 : 1;
             }
+        }
+        
+         /// <summary>
+        /// 駅扱切換表示灯の更新処理
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="lamp"></param>
+        private void UpdateStationSwitchIndicator(UIControlSetting item, bool lamp)
+        {
+            item.ImageIndex = lamp ? 1 : 0;
         }
 
         /// <summary>

@@ -205,8 +205,8 @@ Image	W50_PG		“]‚Ä‚ÂŠí•\¦“”		TH65_W50	N					1941	45											"0,1"	0		"Image/L
 Image	W50_PY		“]‚Ä‚ÂŠí•\¦“”		TH65_W50	R					1975	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W50_Label	W50									14	20	11	11				50	10	Transparent	#FFBCBCBC	P50													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH65_81							2269	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH65_81							2267	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH65_81							2301	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH65_CHRNK							2267	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH65_CHRRK							2301	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 KeyImage	‰ğ•ú99		•¨—Œ®‚Ä‚±	TH65_99							2367	64										‰ğ•ú99	"0,1,10,11"	0	Image/Lever/LeverBase_NR.png	"Image/Lever/KeyLever_KeyOFF_N.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_N.png,Image/Lever/KeyLever_KeyON_R.png"	•ûŒü‚Ä‚±‰ğ•ú‚ÍNR								
 Image	‰ğ•ú99_PY		‰ğ•ú•\¦“”	TH65_99							2382	31											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 Image	142T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è142T							52	411											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								

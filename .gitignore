@@ -384,3 +384,5 @@ TatehamaInterlockingConsole/Manager/ServerAddress.cs
 /exe/runtimes/win-arm64/native
 /TatehamaInterlockingConsole/Properties/ServerAddress.cs
 /exe/TatehamaInterlockingConsole.dll
+/exe/InterlockingActionLog.txt
+/exe/WindowSettings

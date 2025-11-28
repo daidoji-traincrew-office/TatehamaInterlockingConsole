@@ -39,8 +39,8 @@ Image	W21_PG		“]‚Ä‚ÂŠí•\¦“”		TH70_W21	N					956	45											"0,1"	0		"Image/Li
 Image	W21_PY		“]‚Ä‚ÂŠí•\¦“”		TH70_W21	R					990	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W21_Label	W21									14	20	11	11				21	10	Transparent	#FFBCBCBC	P21													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH70_81							1347	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH70_81							1345	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH70_81							1379	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH70_CHRNK							1345	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH70_CHRRK							1379	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 Image	74T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è74T							52	334											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								
 Image	TH71_1RT_1		‹O“¹‰ñ˜H•\¦“”	TH71_1RT							82	334											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
 Image	TH71_21T_W21N_1		‹O“¹‰ñ˜H•\¦“”	TH71_21T	TH71_W21	N					107	334											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									

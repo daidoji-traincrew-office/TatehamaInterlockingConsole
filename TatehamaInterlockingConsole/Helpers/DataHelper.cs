@@ -126,6 +126,23 @@ namespace TatehamaInterlockingConsole.Helpers
         }
 
         /// <summary>
+        /// 日本語駅名を基に駅名対照表からファイル名を返す
+        /// </summary>
+        /// <param name="stationName"></param>
+        /// <returns></returns>
+        public static string GetFileNameFromStationName(string stationName)
+        {
+            DataManager _dataManager = DataManager.Instance;
+
+            var matchingLists = _dataManager.StationSettingList
+                .Where(setting => setting.StationName.Contains(stationName))
+                .FirstOrDefault();
+
+            var stationSetting = matchingLists;
+            return stationSetting?.FileName.Replace("_UIList", "") ?? string.Empty;
+        }
+
+        /// <summary>
         /// 駅番号を基に駅名対照表から日本語駅名を返す
         /// </summary>
         /// <param name="stationNumber">対象の駅番号</param>

@@ -54,8 +54,8 @@ Image	W24_PG		“]‚Ä‚ÂŠí•\¦“”		TH71_W24	N					983	45											"0,1"	0		"Image/Li
 Image	W24_PY		“]‚Ä‚ÂŠí•\¦“”		TH71_W24	R					1017	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
 TextBlock	W24_Label	W24									14	20	11	11				24	10	Transparent	#FFBCBCBC	P24													
 KeyImage	‰wˆµØŠ·		•¨—Œ®‚Ä‚±	TH71_81							1347	64										‰wˆµØŠ·	"-1,1,-11,11"	1	Image/Lever/LeverBase_LR.png	"Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png"	‰wˆµØŠ·‚ÍLR								
-Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH71_81							1345	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
-Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH71_81							1379	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
+Image	‰wˆµØŠ·_PY		‰wˆµØŠ·•\¦“”	TH71_CHRNK							1345	45											"0,1"	0		"Image/Light/N.png,Image/Light/PY.png"									
+Image	‰wˆµØŠ·_PG		‰wˆµØŠ·•\¦“”	TH71_CHRRK							1379	45											"0,1"	0		"Image/Light/N.png,Image/Light/PG.png"									
 Image	56T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è56T							52	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"	0“x¦ˆÈ‰º0“xÈ—ª								
 Image	62T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è62T							82	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
 Image	68T_1		‹O“¹‰ñ˜H•\¦“”	ã‚è68T							112	289											"0,1,2"	0		"Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png"									
