@@ -61,16 +61,6 @@ namespace TatehamaInterlockingConsole.ViewModels
         public string ServerType { get => serverType; set => SetProperty(ref serverType, value); }
 
         /// <summary>
-        /// 時刻を1時間進めるコマンド
-        /// </summary>
-        public ICommand IncreaseTimeCommand { get; }
-
-        /// <summary>
-        /// 時刻を1時間戻すコマンド
-        /// </summary>
-        public ICommand DecreaseTimeCommand { get; }
-
-        /// <summary>
         /// ウィンドウの最前面表示を切り替えるコマンド
         /// </summary>
         public ICommand CheckTopMostCommand { get; }
@@ -141,15 +131,13 @@ namespace TatehamaInterlockingConsole.ViewModels
                     _timeService = timeService;
                     _dataManager = dataManager;
                     _dataManager.Initialize(timeService);
-                    _serverCommunication = new ServerCommunication(openIddictClientService);
+                    _serverCommunication = new ServerCommunication(openIddictClientService, timeService);
                     _buttonHandler = new ButtonHandler(_serverCommunication);
                     _imageHandler = new ImageHandler(_serverCommunication);
                     _labelHandler = new LabelHandler(_serverCommunication);
                     _textBlockHandler = new TextBlockHandler(_serverCommunication);
 
                     Title = "連動盤選択 | 連動盤 - ダイヤ運転会";
-                    IncreaseTimeCommand = new RelayCommand(() => _timeService.IncreaseTime());
-                    DecreaseTimeCommand = new RelayCommand(() => _timeService.DecreaseTime());
                     CheckTopMostCommand = new RelayCommand(() => ToggleAllTopMost());
 
                     // フラグタイマーの初期化

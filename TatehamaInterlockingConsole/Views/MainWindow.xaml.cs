@@ -2,8 +2,8 @@
 using System.Windows;
 using OpenIddict.Client;
 using TatehamaInterlockingConsole.Models;
+using TatehamaInterlockingConsole.Services;
 using TatehamaInterlockingConsole.ViewModels;
-using static TatehamaInterlockingConsole.App;
 
 namespace TatehamaInterlockingConsole.Views
 {
@@ -14,11 +14,11 @@ namespace TatehamaInterlockingConsole.Views
     {
         private readonly ServerCommunication _serverCommunication;
 
-        public MainWindow(MainViewModel viewModel, OpenIddictClientService openIddictClientService)
+        public MainWindow(MainViewModel viewModel, OpenIddictClientService openIddictClientService, TimeService timeService)
         {
             InitializeComponent();
             DataContext = viewModel;
-            _serverCommunication = new ServerCommunication(openIddictClientService);
+            _serverCommunication = new ServerCommunication(openIddictClientService, timeService);
 
             Loaded += OnLoaded;
         }

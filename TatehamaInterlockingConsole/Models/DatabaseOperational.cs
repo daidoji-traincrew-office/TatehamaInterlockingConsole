@@ -60,6 +60,11 @@ namespace TatehamaInterlockingConsole.Models
             /// 表示灯情報リスト
             /// </summary>
             public Dictionary<string, bool> Lamps { get; set; }
+
+            /// <summary>
+            /// TST時差
+            /// </summary>
+            public int TimeOffset { get; set; }
         }
 
         /// <summary>

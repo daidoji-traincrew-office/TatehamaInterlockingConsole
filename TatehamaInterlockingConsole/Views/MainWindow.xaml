@@ -40,13 +40,9 @@
 
         <!-- 時刻補正UI -->
         <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0">
-            <!-- マイナス1時間ボタン -->
-            <custom:CustomButton Content="-1h" Command="{Binding DecreaseTimeCommand}" Width="60" Height="30" Margin="5,5,20,5" FontSize="18"/>
             <!-- 時刻表示 -->
             <TextBlock Text="{Binding CurrentTime, StringFormat='現在時刻 {0:HH:mm:ss}'}" 
-                       FontSize="20" VerticalAlignment="Center" Margin="10" Foreground="#FFF7F7F7"/>
-            <!-- プラス1時間ボタン -->
-            <custom:CustomButton  Content="+1h" Command="{Binding IncreaseTimeCommand}" Width="60" Height="30" Margin="20,5,5,5" FontSize="18"/>
+                       FontSize="24" VerticalAlignment="Center" Margin="10" Foreground="#FFF7F7F7"/>
         </StackPanel>
 
         <StackPanel VerticalAlignment="Center" Grid.Column="2" Orientation="Vertical" HorizontalAlignment="Center" Grid.Row="0">

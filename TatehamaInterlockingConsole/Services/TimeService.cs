@@ -26,7 +26,7 @@ namespace TatehamaInterlockingConsole.Services
         public TimeService()
         {
             _baseTime = DateTime.Now; // 現在時刻を基準時刻として設定
-            _timeOffset = TimeSpan.FromHours(-10); // デフォルトのオフセット値を設定
+            _timeOffset = TimeSpan.FromHours(0); // デフォルトのオフセット値を設定
             _timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(1000) }; // タイマーの間隔を設定
 
             // タイマーのTickイベントに時刻更新処理を登録
@@ -53,20 +53,12 @@ namespace TatehamaInterlockingConsole.Services
         public void Stop() => _timer.Stop();
 
         /// <summary>
-        /// 時刻のオフセットを1時間進める
+        /// 時刻のオフセットを指定の値に設定する
         /// </summary>
-        public void IncreaseTime()
+        /// <param name="newOffset"></param>
+        public void SetTimeOffset(TimeSpan newOffset)
         {
-            _timeOffset = _timeOffset.Add(TimeSpan.FromHours(1)); // オフセットを増加
-            TimeUpdated?.Invoke(CurrentTime); // 更新された時刻を通知
-        }
-
-        /// <summary>
-        /// 時刻のオフセットを1時間戻す
-        /// </summary>
-        public void DecreaseTime()
-        {
-            _timeOffset = _timeOffset.Subtract(TimeSpan.FromHours(1)); // オフセットを減少
+            _timeOffset = newOffset; // オフセットを新しい値に更新
             TimeUpdated?.Invoke(CurrentTime); // 更新された時刻を通知
         }
     }

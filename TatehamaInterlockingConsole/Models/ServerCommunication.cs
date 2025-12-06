@@ -26,6 +26,7 @@ namespace TatehamaInterlockingConsole.Models
         private readonly OpenIddictClientService _openIddictClientService;
         private readonly DataManager _dataManager;
         private readonly DataUpdateViewModel _dataUpdateViewModel;
+        private readonly TimeService _timeService;
         private static HubConnection _connection;
         private static bool _isUpdateLoopRunning = false;
         private const string HubConnectionName = "interlocking";
@@ -36,6 +37,7 @@ namespace TatehamaInterlockingConsole.Models
         private bool _eventHandlersSet = false;
         private const int ReconnectIntervalMs = 500;
         private string _connectionId = "";
+        private TimeSpan _timeOffset = TimeSpan.FromHours(0);
 
         /// <summary>
         /// サーバー接続状態変更イベント
@@ -45,9 +47,10 @@ namespace TatehamaInterlockingConsole.Models
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        public ServerCommunication(OpenIddictClientService openIddictClientService)
+        public ServerCommunication(OpenIddictClientService openIddictClientService, TimeService timeService)
         {
             _openIddictClientService = openIddictClientService;
+            _timeService = timeService;
             _dataManager = DataManager.Instance;
             _dataUpdateViewModel = DataUpdateViewModel.Instance;
 
@@ -249,7 +252,7 @@ namespace TatehamaInterlockingConsole.Models
             }
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
-            
+
             // 接続成功時にConnectionIdを保存
             _connectionId = _connection.ConnectionId ?? "";
 
@@ -268,7 +271,7 @@ namespace TatehamaInterlockingConsole.Models
 
                 // 例外が発生した場合はファイルにログを出力
                 LogDisconnectionException(exception);
-                
+
                 // 例外が発生した場合はログに出力し再接続
                 Debug.WriteLine($"Exception: {exception.Message}\nStackTrace: {exception.StackTrace}");
 
@@ -388,7 +391,7 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns></returns>
         private async Task RefreshTokenAsync(CancellationToken cancellationToken)
         {
-            if(ServerAddress.IsDebug)
+            if (ServerAddress.IsDebug)
             {
                 Debug.WriteLine("Debug mode, skipping token refresh.");
                 return;
@@ -503,6 +506,13 @@ namespace TatehamaInterlockingConsole.Models
                             };
                         }
                     }).ToList();
+                }
+
+                // TST時差を更新(TC本体更新までの暫定対応)
+                if (data.TimeOffset != _timeOffset.Hours)
+                {
+                    _timeOffset = TimeSpan.FromHours(data.TimeOffset);
+                    _timeService.SetTimeOffset(_timeOffset);
                 }
 
                 // コントロール更新処理
