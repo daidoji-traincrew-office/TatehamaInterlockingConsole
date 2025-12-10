@@ -252,6 +252,7 @@ namespace TatehamaInterlockingConsole.Models
             }
 
             _connection.On<DatabaseOperational.DataFromServer>("ReceiveData", OnReceiveDataFromServer);
+            _connection.On<List<DatabaseOperational.SignalData>>("ReceiveSignalData", OnReceiveSignalData);
 
             // 接続成功時にConnectionIdを保存
             _connectionId = _connection.ConnectionId ?? "";
@@ -438,6 +439,32 @@ namespace TatehamaInterlockingConsole.Models
             {
                 _connection = null;
                 _eventHandlersSet = false;
+            }
+        }
+
+        /// <summary>
+        /// サーバーから信号データが来たときの処理
+        /// </summary>
+        /// <param name="signals">サーバーから受信された信号データリスト</param>
+        private void OnReceiveSignalData(List<DatabaseOperational.SignalData> signals)
+        {
+            try
+            {
+                if (signals == null)
+                {
+                    Debug.WriteLine("Failed to receive signal data.");
+                    return;
+                }
+
+                // 信号機データを更新
+                DatabaseOperational.Instance.Signals = signals;
+
+                // 信号機専用のコントロール更新処理
+                _dataUpdateViewModel.UpdateSignalControl();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error receiving signal data: {ex.Message}{ex.StackTrace}");
             }
         }
 
