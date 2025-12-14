@@ -12,6 +12,11 @@ namespace TatehamaInterlockingConsole.Models
         public static DatabaseOperational Instance => _instance;
 
         /// <summary>
+        /// 信号機情報リスト（ReceiveSignalDataで受信）
+        /// </summary>
+        public List<SignalData> Signals { get; set; } = new List<SignalData>();
+
+        /// <summary>
         /// 受信用データクラス
         /// </summary>
         public class DataFromServer
@@ -25,11 +30,6 @@ namespace TatehamaInterlockingConsole.Models
             /// 転てつ器情報リスト
             /// </summary>
             public List<SwitchData> Points { get; set; }
-
-            /// <summary>
-            /// 信号機情報リスト
-            /// </summary>
-            public List<SignalData> Signals { get; set; }
 
             /// <summary>
             /// 物理てこ情報リスト

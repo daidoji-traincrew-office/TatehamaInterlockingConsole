@@ -96,6 +96,25 @@ namespace TatehamaInterlockingConsole.ViewModels
         }
 
         /// <summary>
+        /// 信号機データ受信時のコントロール更新
+        /// </summary>
+        public void UpdateSignalControl()
+        {
+            // コントロール更新処理
+            var updateList = UpdateSignalControlsetting();
+
+            // 変更通知イベント発火
+            if (Application.Current?.Dispatcher != null)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    var handler = NotifyUpdateControlEvent;
+                    handler?.Invoke(updateList);
+                });
+            }
+        }
+
+        /// <summary>
         /// サーバー情報を基にコントロールの状態更新
         /// </summary>
         /// <returns></returns>
@@ -127,7 +146,6 @@ namespace TatehamaInterlockingConsole.ViewModels
                 dataFromServer.TrackCircuits.Any(t => t.Name == item.ServerName) ||
                 dataFromServer.Points.Any(p => p.Name == item.PointNameA || p.Name == item.PointNameB) ||
                 dataFromServer.Directions.Any(d => d.Name == item.DirectionName) ||
-                dataFromServer.Signals.Any(s => s.Name == item.ServerName) ||
                 dataFromServer.PhysicalLevers.Any(l => l.Name == item.ServerName) ||
                 dataFromServer.PhysicalKeyLevers.Any(l => l.Name == item.ServerName) ||
                 dataFromServer.PhysicalButtons.Any(b => b.Name == item.ServerName) ||
@@ -146,8 +164,6 @@ namespace TatehamaInterlockingConsole.ViewModels
                         .FirstOrDefault(p => p.Name == item.PointNameB);
                     var direction = dataFromServer.Directions
                         .FirstOrDefault(l => l.Name == item.DirectionName);
-                    var signal = dataFromServer.Signals
-                        .FirstOrDefault(s => s.Name == item.ServerName);
                     var physicalLever = dataFromServer.PhysicalLevers
                         .FirstOrDefault(l => l.Name == item.ServerName);
                     var physicalKeyLever = dataFromServer.PhysicalKeyLevers
@@ -162,13 +178,6 @@ namespace TatehamaInterlockingConsole.ViewModels
                     // サーバー分類毎に処理
                     switch (item.ServerType)
                     {
-                        case "信号機表示灯":
-                            if (signal != null)
-                            {
-                                // 進行信号
-                                item.ImageIndex = signal.Phase != EnumData.Phase.R ? 1 : 0;
-                            }
-                            break;
                         case "転てつ器表示灯":
                             UpdatePointIndicator(item, pointA, pointB);
                             break;
@@ -255,7 +264,7 @@ namespace TatehamaInterlockingConsole.ViewModels
                     conditionsPoint = dataFromServer.Points
                         .FirstOrDefault(p => alarm.ConditionsList
                         .Any(c => (c.Type == "Point") && (c.Name == p.Name)));
-                    conditionsSignal = dataFromServer.Signals
+                    conditionsSignal = DatabaseOperational.Instance.Signals
                         .FirstOrDefault(p => alarm.ConditionsList
                         .Any(c => (c.Type == "Signal") && (c.Name == p.Name)));
                     conditionsDirection = dataFromServer.Directions
@@ -813,6 +822,58 @@ namespace TatehamaInterlockingConsole.ViewModels
             // それ以外は条件を満たさない
             else
                 return false;
+        }
+
+        /// <summary>
+        /// 信号機情報を基にコントロールの状態更新
+        /// </summary>
+        /// <returns></returns>
+        private List<UIControlSetting> UpdateSignalControlsetting()
+        {
+            // データ取得
+            var allSettingList = new List<UIControlSetting>(_dataManager.AllControlSettingList);
+            var activeStationsList = _dataManager.ActiveStationsList;
+            var activeStationSettingList = allSettingList.Where(setting => activeStationsList.Contains(setting.StationNumber)).ToList();
+
+            try
+            {
+                // 信号機データを取得
+                var signals = DatabaseOperational.Instance.Signals;
+
+                // 信号機表示灯のみを抽出
+                var relevantSettings = activeStationSettingList.Where(item =>
+                    item.ServerType == "信号機表示灯" &&
+                    signals.Any(s => s.Name == item.ServerName)
+                ).ToList();
+
+                foreach (var item in relevantSettings)
+                {
+                    // コントロールと一致する信号機情報のみ抽出
+                    var signal = signals.FirstOrDefault(s => s.Name == item.ServerName);
+
+                    if (signal != null)
+                    {
+                        // 進行信号
+                        item.ImageIndex = signal.Phase != EnumData.Phase.R ? 1 : 0;
+                    }
+                }
+
+                // 起動している駅ウィンドウのデータを全コントロール設定データに反映
+                foreach (var activeSetting in activeStationSettingList)
+                {
+                    var index = allSettingList.FindIndex(setting => setting.StationNumber == activeSetting.StationNumber && setting.UniqueName == activeSetting.UniqueName);
+                    if (index >= 0)
+                    {
+                        allSettingList[index] = activeSetting;
+                    }
+                }
+                return allSettingList;
+            }
+            catch (Exception ex)
+            {
+                CustomMessage.Show(ex.ToString(), "エラー");
+                throw;
+            }
         }
     }
 }
