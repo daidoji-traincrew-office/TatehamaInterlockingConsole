@@ -386,3 +386,7 @@ TatehamaInterlockingConsole/Manager/ServerAddress.cs
 /exe/TatehamaInterlockingConsole.dll
 /exe/InterlockingActionLog.txt
 /exe/WindowSettings
+/exe/TatehamaInterlockingConsole.deps.json
+/exe/TatehamaInterlockingConsole.dll.config
+/exe/TatehamaInterlockingConsole.exe
+/exe/TatehamaInterlockingConsole.runtimeconfig.json
