@@ -677,7 +677,7 @@ namespace TatehamaInterlockingConsole.Models
         /// </summary>
         /// <param name="buttonData"></param>
         /// <returns></returns>
-        public async Task SendButtonEventDataRequestToServerAsync(DatabaseOperational.DestinationButtonData buttonData)
+        public async Task SendDestinationButtonEventDataRequestToServerAsync(DatabaseOperational.DestinationButtonData buttonData)
         {
             try
             {
@@ -734,6 +734,25 @@ namespace TatehamaInterlockingConsole.Models
                 {
                     Debug.WriteLine($"Error server receiving: {ex.Message}{ex.StackTrace}");
                 }
+            }
+            catch (Exception exception)
+            {
+                Debug.WriteLine($"Failed to send event data to server: {exception.Message}");
+            }
+        }
+
+        /// <summary>
+        /// サーバーへ接近警報停止イベント送信用データをリクエスト
+        /// </summary>
+        /// <param name="approachAlertStopRingRequest"></param>
+        /// <returns></returns>
+        public async Task SendStopApproachAlertEventDataRequestToServerAsync(DatabaseOperational.ApproachAlertStopRingRequest approachAlertStopRingRequest)
+        {
+            try
+            {
+                // サーバーメソッドの呼び出し
+                await _connection.InvokeAsync<DatabaseOperational.DestinationButtonData>(
+                    "StopApproachAlertRinging", approachAlertStopRingRequest);
             }
             catch (Exception exception)
             {

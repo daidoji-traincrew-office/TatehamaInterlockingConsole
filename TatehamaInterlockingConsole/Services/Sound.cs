@@ -24,13 +24,16 @@ namespace TatehamaInterlockingConsole.Services
         public Dictionary<string, float> SoundVolumeDic = new();
         public float fMasterVolume = 1.0f;
 
+        // クラスフィールドに音声データのキャッシュを追加
+        private Dictionary<string, byte[]> SoundDataCache = new();
+
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public Sound()
         {
-            
-        }　
+
+        }
 
         /// <summary>
         /// サウンド初期化メソッド　
@@ -70,23 +73,38 @@ namespace TatehamaInterlockingConsole.Services
                 var activeStationList = DataManager.Instance.ActiveStationsList;
 
                 // 接近警報鳴動処理
-                foreach (var activeAlarm in DataManager.Instance.ActiveAlarmsList)
+                var activeAlarmKeys = new HashSet<string>();
+                var tmpActiveAlarmsList = DataManager.Instance.ActiveAlarmsList.ToList();
+
+                foreach (var activeAlarm in tmpActiveAlarmsList)
                 {
                     var stationSetting = stationSettingList
                         .FirstOrDefault(s => s.StationName == activeAlarm.StationName);
+
+                    if (stationSetting == null) continue;
+
                     bool isPlay = activeStationList
                         .Any(s => s == stationSetting.StationNumber);
 
-                    if (stationSetting != null)
+                    if (activeAlarm.IsUpSide)
                     {
-                        if (activeAlarm.IsUpSide)
-                        {
-                            SetAlarmVolumeBasedOnType(stationSetting.UpSideAlarmType, stationSetting.UpSideAlarmName + "_loop", isPlay);
-                        }
-                        else
-                        {
-                            SetAlarmVolumeBasedOnType(stationSetting.DownSideAlarmType, stationSetting.DownSideAlarmName + "_loop", isPlay);
-                        }
+                        var alarmName = stationSetting.UpSideAlarmName + "_loop";
+                        if (isPlay) activeAlarmKeys.Add(alarmName);
+                        SetAlarmVolumeBasedOnType(stationSetting.UpSideAlarmType, alarmName, isPlay);
+                    }
+                    else
+                    {
+                        var alarmName = stationSetting.DownSideAlarmName + "_loop";
+                        if (isPlay) activeAlarmKeys.Add(alarmName);
+                        SetAlarmVolumeBasedOnType(stationSetting.DownSideAlarmType, alarmName, isPlay);
+                    }
+                }
+                // ActiveAlarmsListに存在しない警報音声を停止
+                foreach (var alarmKey in SoundSource.Keys.Where(k => k.Contains("_loop") && k.Contains("TH")))
+                {
+                    if (!activeAlarmKeys.Contains(alarmKey))
+                    {
+                        SetVolume(alarmKey, 0.0f);
                     }
                 }
 
@@ -140,98 +158,73 @@ namespace TatehamaInterlockingConsole.Services
                         continue;
                     }
 
-                    // サウンドファイルを読み込む
+                    // サウンドファイルを読み込んでバイト配列として保持
+                    WaveFormat waveFormat;
+                    byte[] audioData;
+
                     using (var stream = new SoundStream(File.OpenRead(filePath)))
                     {
-                        var waveFormat = stream.Format;
-                        var buffer = new AudioBuffer
+                        waveFormat = stream.Format;
+                        using (var dataStream = stream.ToDataStream())
                         {
-                            Stream = stream.ToDataStream(),
-                            AudioBytes = (int)stream.Length,
-                            LoopCount = 0,
-                            LoopBegin = 0,
-                            LoopLength = 0,
-                            PlayBegin = 0,
-                            PlayLength = 0,
-                            Flags = BufferFlags.EndOfStream
-                        };
-
-                        // SourceVoiceを作成
-                        var sourceVoice = new SourceVoice(xAudio2, waveFormat, VoiceFlags.None, maxFrequencyRatio: 4.0f);
-
-                        // ファイル名をキーとしてSourceVoiceとAudioBufferを辞書に追加
-                        var fileName = Path.GetFileNameWithoutExtension(filePath);
-                        if (!fileName.Contains("_loop") && !fileName.Contains("_end"))
-                        {
-                            SoundSource[fileName] = sourceVoice;
-                            SoundBuffer[fileName] = buffer;
-                            SoundVolumeDic[fileName] = 1.0f;
+                            audioData = new byte[dataStream.Length];
+                            dataStream.Read(audioData, 0, (int)dataStream.Length);
                         }
-                        else
+                    }
+
+                    var fileName = Path.GetFileNameWithoutExtension(filePath);
+
+                    if (!fileName.Contains("_loop") && !fileName.Contains("_end"))
+                    {
+                        CreateSourceVoice(fileName, waveFormat, audioData, 1.0f);
+                    }
+                    else
+                    {
+                        // キャッシュに保存
+                        SoundDataCache[fileName] = audioData;
+
+                        var baseFileName = fileName.Replace("_loop", "").Replace("_end", "");
+
+                        foreach (var stationSetting in stationSettingList)
                         {
-                            // stationSettingListにfileNameを含んだ音声ファイルがあれば複製して辞書に追加
-                            var baseFileName = fileName.Replace("_loop", "").Replace("_end", "");
-                            foreach (var stationSetting in stationSettingList)
+                            if (stationSetting.UpSideAlarmName.Contains(baseFileName)
+                                || stationSetting.DownSideAlarmName.Contains(baseFileName)
+                                || stationSetting.DirectionAlarmName.Contains(baseFileName))
                             {
-                                if (stationSetting.UpSideAlarmName.Contains(baseFileName)
-                                    || stationSetting.DownSideAlarmName.Contains(baseFileName)
-                                    || stationSetting.DirectionAlarmName.Contains(baseFileName))
+                                if (fileName.Contains("_loop"))
                                 {
-                                    // 複製元音声がLoopの場合
-                                    if (fileName.Contains("_loop"))
+                                    if (stationSetting.UpSideAlarmName.Contains(baseFileName))
                                     {
-                                        // UpSideAlarmNameと比較
-                                        if (stationSetting.UpSideAlarmName.Contains(baseFileName))
-                                        {
-                                            var loopFileName = stationSetting.UpSideAlarmName + "_loop";
-                                            SoundSource[loopFileName] = sourceVoice;
-                                            SoundBuffer[loopFileName] = buffer;
-                                            SoundVolumeDic[loopFileName] = 0.0f;
-                                        }
-                                        // DownSideAlarmNameと比較
-                                        if (stationSetting.DownSideAlarmName.Contains(baseFileName))
-                                        {
-                                            var loopFileName = stationSetting.DownSideAlarmName + "_loop";
-                                            SoundSource[loopFileName] = sourceVoice;
-                                            SoundBuffer[loopFileName] = buffer;
-                                            SoundVolumeDic[loopFileName] = 0.0f;
-                                        }
-                                        // DirectionAlarmNameと比較
-                                        if (stationSetting.DirectionAlarmName.Contains(baseFileName))
-                                        {
-                                            var loopFileName = stationSetting.DirectionAlarmName + "_loop";
-                                            SoundSource[loopFileName] = sourceVoice;
-                                            SoundBuffer[loopFileName] = buffer;
-                                            SoundVolumeDic[loopFileName] = 0.0f;
-                                        }
+                                        var loopFileName = stationSetting.UpSideAlarmName + "_loop";
+                                        CreateSourceVoice(loopFileName, waveFormat, audioData, 0.0f);
                                     }
-                                    // 複製元音声がEndの場合
-                                    else if (fileName.Contains("_end"))
+                                    if (stationSetting.DownSideAlarmName.Contains(baseFileName))
                                     {
-                                        // UpSideAlarmNameと比較
-                                        if (stationSetting.UpSideAlarmName.Contains(baseFileName))
-                                        {
-                                            var endFileName = stationSetting.UpSideAlarmName + "_end";
-                                            SoundSource[endFileName] = sourceVoice;
-                                            SoundBuffer[endFileName] = buffer;
-                                            SoundVolumeDic[endFileName] = 1.0f;
-                                        }
-                                        // DownSideAlarmNameと比較
-                                        if (stationSetting.DownSideAlarmName.Contains(baseFileName))
-                                        {
-                                            var endFileName = stationSetting.DownSideAlarmName + "_end";
-                                            SoundSource[endFileName] = sourceVoice;
-                                            SoundBuffer[endFileName] = buffer;
-                                            SoundVolumeDic[endFileName] = 1.0f;
-                                        }
-                                        // DirectionAlarmNameと比較
-                                        if (stationSetting.DirectionAlarmName.Contains(baseFileName))
-                                        {
-                                            var endFileName = stationSetting.DirectionAlarmName + "_end";
-                                            SoundSource[endFileName] = sourceVoice;
-                                            SoundBuffer[endFileName] = buffer;
-                                            SoundVolumeDic[endFileName] = 1.0f;
-                                        }
+                                        var loopFileName = stationSetting.DownSideAlarmName + "_loop";
+                                        CreateSourceVoice(loopFileName, waveFormat, audioData, 0.0f);
+                                    }
+                                    if (stationSetting.DirectionAlarmName.Contains(baseFileName))
+                                    {
+                                        var loopFileName = stationSetting.DirectionAlarmName + "_loop";
+                                        CreateSourceVoice(loopFileName, waveFormat, audioData, 0.0f);
+                                    }
+                                }
+                                else if (fileName.Contains("_end"))
+                                {
+                                    if (stationSetting.UpSideAlarmName.Contains(baseFileName))
+                                    {
+                                        var endFileName = stationSetting.UpSideAlarmName + "_end";
+                                        CreateSourceVoice(endFileName, waveFormat, audioData, 1.0f);
+                                    }
+                                    if (stationSetting.DownSideAlarmName.Contains(baseFileName))
+                                    {
+                                        var endFileName = stationSetting.DownSideAlarmName + "_end";
+                                        CreateSourceVoice(endFileName, waveFormat, audioData, 1.0f);
+                                    }
+                                    if (stationSetting.DirectionAlarmName.Contains(baseFileName))
+                                    {
+                                        var endFileName = stationSetting.DirectionAlarmName + "_end";
+                                        CreateSourceVoice(endFileName, waveFormat, audioData, 1.0f);
                                     }
                                 }
                             }
@@ -246,14 +239,45 @@ namespace TatehamaInterlockingConsole.Services
         }
 
         /// <summary>
+        /// SourceVoiceとAudioBufferを作成して辞書に追加
+        /// </summary>
+        private void CreateSourceVoice(string key, WaveFormat waveFormat, byte[] audioData, float initialVolume)
+        {
+            var sourceVoice = new SourceVoice(xAudio2, waveFormat, VoiceFlags.None, maxFrequencyRatio: 4.0f);
+            var buffer = new AudioBuffer
+            {
+                Stream = SharpDX.DataStream.Create(audioData, true, false),
+                AudioBytes = audioData.Length,
+                LoopCount = 0,
+                LoopBegin = 0,
+                LoopLength = 0,
+                PlayBegin = 0,
+                PlayLength = 0,
+                Flags = BufferFlags.EndOfStream
+            };
+
+            SoundSource[key] = sourceVoice;
+            SoundBuffer[key] = buffer;
+            SoundVolumeDic[key] = initialVolume;
+        }
+
+        /// <summary>
         /// 既存の音声データをクリア
         /// </summary>
         private void ClearSoundData()
         {
             // すべてのSourceVoiceを停止して解放
             SoundAllStop();
+
+            // AudioBufferのStreamを解放
+            foreach (var buffer in SoundBuffer.Values)
+            {
+                buffer.Stream?.Dispose();
+            }
+
             SoundSource.Clear();
             SoundBuffer.Clear();
+            SoundDataCache.Clear();
         }
 
         /// <summary>

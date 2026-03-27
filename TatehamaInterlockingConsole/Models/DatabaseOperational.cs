@@ -65,6 +65,29 @@ namespace TatehamaInterlockingConsole.Models
             /// TST時差
             /// </summary>
             public int TimeOffset { get; set; }
+
+            /// <summary>
+            /// 鳴動中の接近警報リスト
+            /// </summary>
+            public List<ApproachAlertRingingState> RingingApproachAlerts { get; set; }
+        }
+
+        /// <summary>
+        /// 接近警報鳴動停止リクエスト
+        /// </summary>
+        public class ApproachAlertStopRingRequest
+        {
+            public required string StationId { get; set; }
+            public required bool IsUp { get; set; }
+        }
+
+        /// <summary>
+        /// 接近警報鳴動状態
+        /// </summary>
+        public class ApproachAlertRingingState
+        {
+            public required string StationId { get; set; }
+            public required bool IsUp { get; set; }
         }
 
         /// <summary>

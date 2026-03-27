@@ -43,11 +43,6 @@ namespace TatehamaInterlockingConsole.Manager
         public List<StationSetting> StationSettingList { get; set; }
 
         /// <summary>
-        /// 接近警報鳴動条件リストデータ
-        /// </summary>
-        public List<ApproachingAlarmSetting> ApproachingAlarmConditionList { get; set; }
-
-        /// <summary>
         /// サーバー接続状態
         /// </summary>
         public bool ServerConnected { get; set; }
@@ -162,7 +157,6 @@ namespace TatehamaInterlockingConsole.Manager
             ActiveStationsList = new();
             ActiveAlarmsList = new();
             DirectionStateList = new();
-            ApproachingAlarmConditionList = new();
             IsTopMost = true;
         }
 

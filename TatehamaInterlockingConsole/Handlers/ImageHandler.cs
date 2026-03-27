@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using TatehamaInterlockingConsole.Helpers;
 using TatehamaInterlockingConsole.Manager;
 using TatehamaInterlockingConsole.Models;
 using TatehamaInterlockingConsole.Services;
@@ -296,7 +297,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         IsRaised = EnumData.ConvertToRaiseDrop(newIndex),
                         OperatedAt = DateTime.Now
                     };
-                    _ = _serverCommunication.SendButtonEventDataRequestToServerAsync(destinationButtonData);
+                    _ = _serverCommunication.SendDestinationButtonEventDataRequestToServerAsync(destinationButtonData);
                     LogManager.WriteLog($"ボタン操作 : {destinationButtonData.Name} : {destinationButtonData.IsRaised}");
                     //CustomMessage.Show($"Name: {destinationButtonData.Name} State: {destinationButtonData.IsRaised}",
                     //    "サーバー送信",
@@ -315,10 +316,18 @@ namespace TatehamaInterlockingConsole.Handlers
                         StationName = "江ノ原検車区表示盤";
                     }
 
-                    _dataManager.ActiveAlarmsList
-                        .RemoveAll(alarm => alarm.StationName == StationName && alarm.IsUpSide == control.UniqueName.Contains("上り"));
-
-                    Sound.Instance.LoopSoundAllStop(StationName, control.UniqueName.Contains("上り"));
+                    var approachAlertStopButtonData = new DatabaseOperational.ApproachAlertStopRingRequest
+                    {
+                        StationId = DataHelper.GetStationNumberFromStationName(StationName),
+                        IsUp = control.UniqueName.Contains("上り")
+                    };
+                    _ = _serverCommunication.SendStopApproachAlertEventDataRequestToServerAsync(approachAlertStopButtonData);
+                    LogManager.WriteLog($"ボタン操作 : 接近ボタン - 駅番号 : {approachAlertStopButtonData.StationId} - 上り : {approachAlertStopButtonData.IsUp}");
+                    //CustomMessage.Show($"Name: {approachAlertStopButtonData.StationId} State: {approachAlertStopButtonData.IsUp}",
+                    //    "サーバー送信",
+                    //    System.Windows.MessageBoxButton.OK,
+                    //    System.Windows.MessageBoxImage.Information
+                    //    );
 
                     // 音声再生
                     string randomPushSoundIndex = _random.Next(1, 13).ToString("00");
@@ -353,7 +362,7 @@ namespace TatehamaInterlockingConsole.Handlers
                         IsRaised = EnumData.ConvertToRaiseDrop(newIndex),
                         OperatedAt = DateTime.Now
                     };
-                    _ = _serverCommunication.SendButtonEventDataRequestToServerAsync(destinationButtonData);
+                    _ = _serverCommunication.SendDestinationButtonEventDataRequestToServerAsync(destinationButtonData);
                     LogManager.WriteLog($"ボタン操作 : {destinationButtonData.Name} : {destinationButtonData.IsRaised}");
                     //CustomMessage.Show($"Name: {destinationButtonData.Name} State: {destinationButtonData.IsRaised}",
                     //    "サーバー送信",

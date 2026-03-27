@@ -189,8 +189,6 @@ namespace TatehamaInterlockingConsole.ViewModels
 
             // 駅設定データをリストに格納
             _dataManager.StationSettingList = StationSettingLoader.LoadSettings(tsvFolderPath, "StationSettingList.tsv");
-            // 近接警報条件データをリストに格納
-            _dataManager.ApproachingAlarmConditionList = ApproachingAlarmSettingLoader.LoadSettings(tsvFolderPath, "ApproachingAlarmConditionList.tsv");
             // UI設定データをリストに格納
             _dataManager.AllControlSettingList = UIElementLoader.LoadSettingsFromFolderAsUIControlSetting(tsvFolderPath);
             // 列番表示画像Pathを辞書に格納
