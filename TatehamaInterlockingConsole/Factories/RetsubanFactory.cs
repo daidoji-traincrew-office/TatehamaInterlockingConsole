@@ -129,7 +129,7 @@ namespace TatehamaInterlockingConsole.Factories
             }
 
             // 正規表現パターンの定義
-            var pattern = @"([回試臨]?)([0-9]{0,4})(A|B|C|K|X|Y|Z|AX|BX|CX|KX|AY|BY|CY|KY|AZ|BZ|CZ|KZ)?$";
+            var pattern = @"^(回|臨|臨回|検|試)?([0-9]{3,4})([TS]?[ABCDK]?[XYZ]?)?$";
             var match = Regex.Match(retsuban, pattern);
 
             // マッチしない場合は、接尾文字に「？」を設定
@@ -200,8 +200,11 @@ namespace TatehamaInterlockingConsole.Factories
         private static string GetHeadSymbolKey(string head)
         {
             if (head == "回") return "16dot_Kai";
-            if (head == "試") return "16dot_Shi";
             if (head == "臨") return "16dot_Rin";
+            if (head == "臨回") return "16dot_Rinkai";
+            if (head == "検") return "16dot_Ken";
+            if (head == "試") return "16dot_Shi";
+
             return "16dot_Null";
         }
 
@@ -212,25 +215,110 @@ namespace TatehamaInterlockingConsole.Factories
         /// <returns></returns>
         private static string GetTailSymbolKey(string tail)
         {
-            if (tail == "A") return "16dot_A";
-            if (tail == "B") return "16dot_B";
-            if (tail == "C") return "16dot_C";
-            if (tail == "K") return "16dot_K";
-            if (tail == "X") return "16dot_X";
-            if (tail == "Y") return "16dot_Y";
-            if (tail == "Z") return "16dot_Z";
+            // 3文字: T + [ABCDK] + X
+            if (tail == "TAX") return "16dot_TAX";
+            if (tail == "TBX") return "16dot_TBX";
+            if (tail == "TCX") return "16dot_TCX";
+            if (tail == "TDX") return "16dot_TDX";
+            if (tail == "TKX") return "16dot_TKX";
+
+            // 3文字: T + [ABCDK] + Y
+            if (tail == "TAY") return "16dot_TAY";
+            if (tail == "TBY") return "16dot_TBY";
+            if (tail == "TCY") return "16dot_TCY";
+            if (tail == "TDY") return "16dot_TDY";
+            if (tail == "TKY") return "16dot_TKY";
+
+            // 3文字: T + [ABCDK] + Z
+            if (tail == "TAZ") return "16dot_TAZ";
+            if (tail == "TBZ") return "16dot_TBZ";
+            if (tail == "TCZ") return "16dot_TCZ";
+            if (tail == "TDZ") return "16dot_TDZ";
+            if (tail == "TKZ") return "16dot_TKZ";
+
+            // 3文字: S + [ABCDK] + X
+            if (tail == "SAX") return "16dot_SAX";
+            if (tail == "SBX") return "16dot_SBX";
+            if (tail == "SCX") return "16dot_SCX";
+            if (tail == "SDX") return "16dot_SDX";
+            if (tail == "SKX") return "16dot_SKX";
+
+            // 3文字: S + [ABCDK] + Y
+            if (tail == "SAY") return "16dot_SAY";
+            if (tail == "SBY") return "16dot_SBY";
+            if (tail == "SCY") return "16dot_SCY";
+            if (tail == "SDY") return "16dot_SDY";
+            if (tail == "SKY") return "16dot_SKY";
+
+            // 3文字: S + [ABCDK] + Z
+            if (tail == "SAZ") return "16dot_SAZ";
+            if (tail == "SBZ") return "16dot_SBZ";
+            if (tail == "SCZ") return "16dot_SCZ";
+            if (tail == "SDZ") return "16dot_SDZ";
+            if (tail == "SKZ") return "16dot_SKZ";
+
+            // 2文字: T + [ABCDK]
+            if (tail == "TA") return "16dot_TA";
+            if (tail == "TB") return "16dot_TB";
+            if (tail == "TC") return "16dot_TC";
+            if (tail == "TD") return "16dot_TD";
+            if (tail == "TK") return "16dot_TK";
+
+            // 2文字: T + [XYZ]
+            if (tail == "TX") return "16dot_TX";
+            if (tail == "TY") return "16dot_TY";
+            if (tail == "TZ") return "16dot_TZ";
+
+            // 2文字: S + [ABCDK]
+            if (tail == "SA") return "16dot_SA";
+            if (tail == "SB") return "16dot_SB";
+            if (tail == "SC") return "16dot_SC";
+            if (tail == "SD") return "16dot_SD";
+            if (tail == "SK") return "16dot_SK";
+
+            // 2文字: S + [XYZ]
+            if (tail == "SX") return "16dot_SX";
+            if (tail == "SY") return "16dot_SY";
+            if (tail == "SZ") return "16dot_SZ";
+
+            // 2文字: [ABCDK] + X
             if (tail == "AX") return "16dot_AX";
             if (tail == "BX") return "16dot_BX";
             if (tail == "CX") return "16dot_CX";
+            if (tail == "DX") return "16dot_DX";
             if (tail == "KX") return "16dot_KX";
+
+            // 2文字: [ABCDK] + Y
             if (tail == "AY") return "16dot_AY";
             if (tail == "BY") return "16dot_BY";
             if (tail == "CY") return "16dot_CY";
+            if (tail == "DY") return "16dot_DY";
             if (tail == "KY") return "16dot_KY";
+
+            // 2文字: [ABCDK] + Z
             if (tail == "AZ") return "16dot_AZ";
             if (tail == "BZ") return "16dot_BZ";
             if (tail == "CZ") return "16dot_CZ";
+            if (tail == "DZ") return "16dot_DZ";
             if (tail == "KZ") return "16dot_KZ";
+
+            // 1文字: [TS]
+            if (tail == "T") return "16dot_T";
+            if (tail == "S") return "16dot_S";
+
+            // 1文字: [ABCDK]
+            if (tail == "A") return "16dot_A";
+            if (tail == "B") return "16dot_B";
+            if (tail == "C") return "16dot_C";
+            if (tail == "D") return "16dot_D";
+            if (tail == "K") return "16dot_K";
+
+            // 1文字: [XYZ]
+            if (tail == "X") return "16dot_X";
+            if (tail == "Y") return "16dot_Y";
+            if (tail == "Z") return "16dot_Z";
+
+            // 空文字
             return "16dot_Null";
         }
 
