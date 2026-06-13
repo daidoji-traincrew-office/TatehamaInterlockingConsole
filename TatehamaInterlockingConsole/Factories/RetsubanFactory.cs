@@ -129,7 +129,7 @@ namespace TatehamaInterlockingConsole.Factories
             }
 
             // 正規表現パターンの定義
-            var pattern = @"([回試臨]?)([0-9]{0,4})(A|B|C|K|X|Y|Z|AX|BX|CX|KX|AY|BY|CY|KY|AZ|BZ|CZ|KZ)?$";
+            var pattern = @"([回試臨]?)([0-9]{0,4})(A|AX|AY|AZ|B|BX|BY|BZ|C|CX|CY|CZ|D|DX|DY|DZ|K|KX|KY|KZ|S|SA|SAX|SAY|SAZ|SB|SBX|SBY|SBZ|SC|SCX|SCY|SCZ|SD|SDX|SDY|SDZ|SK|SKX|SKY|SKZ|SX|SY|SZ|T|TA|TAX|TAY|TAZ|TB|TBX|TBY|TBZ|TC|TCX|TCY|TCZ|TD|TDX|TDY|TDZ|TK|TKX|TKY|TKZ|TX|TY|TZ|X|Y|Z)?$";
             var match = Regex.Match(retsuban, pattern);
 
             // マッチしない場合は、接尾文字に「？」を設定
@@ -200,6 +200,7 @@ namespace TatehamaInterlockingConsole.Factories
         private static string GetHeadSymbolKey(string head)
         {
             if (head == "回") return "16dot_Kai";
+            if (head == "臨回") return "16dot_Rinkai";
             if (head == "試") return "16dot_Shi";
             if (head == "臨") return "16dot_Rin";
             return "16dot_Null";
@@ -213,24 +214,76 @@ namespace TatehamaInterlockingConsole.Factories
         private static string GetTailSymbolKey(string tail)
         {
             if (tail == "A") return "16dot_A";
+            if (tail == "AX") return "16dot_AX";
+            if (tail == "AY") return "16dot_AY";
+            if (tail == "AZ") return "16dot_AZ";
             if (tail == "B") return "16dot_B";
+            if (tail == "BX") return "16dot_BX";
+            if (tail == "BY") return "16dot_BY";
+            if (tail == "BZ") return "16dot_BZ";
             if (tail == "C") return "16dot_C";
+            if (tail == "CX") return "16dot_CX";
+            if (tail == "CY") return "16dot_CY";
+            if (tail == "CZ") return "16dot_CZ";
+            if (tail == "D") return "16dot_D";
+            if (tail == "DX") return "16dot_DX";
+            if (tail == "DY") return "16dot_DY";
+            if (tail == "DZ") return "16dot_DZ";
             if (tail == "K") return "16dot_K";
+            if (tail == "KX") return "16dot_KX";
+            if (tail == "KY") return "16dot_KY";
+            if (tail == "KZ") return "16dot_KZ";
+            if (tail == "S") return "16dot_S";
+            if (tail == "SX") return "16dot_SX";
+            if (tail == "SY") return "16dot_SY";
+            if (tail == "SZ") return "16dot_SZ";
+            if (tail == "SA") return "16dot_SA";
+            if (tail == "SAX") return "16dot_SAX";
+            if (tail == "SAY") return "16dot_SAY";
+            if (tail == "SAZ") return "16dot_SAZ";
+            if (tail == "SB") return "16dot_SB";
+            if (tail == "SBX") return "16dot_SBX";
+            if (tail == "SBY") return "16dot_SBY";
+            if (tail == "SBZ") return "16dot_SBZ";
+            if (tail == "SC") return "16dot_SC";
+            if (tail == "SCX") return "16dot_SCX";
+            if (tail == "SCY") return "16dot_SCY";
+            if (tail == "SCZ") return "16dot_SCZ";
+            if (tail == "SD") return "16dot_SD";
+            if (tail == "SDX") return "16dot_SDX";
+            if (tail == "SDY") return "16dot_SDY";
+            if (tail == "SDZ") return "16dot_SDZ";
+            if (tail == "SK") return "16dot_SK";
+            if (tail == "SKX") return "16dot_SKX";
+            if (tail == "SKY") return "16dot_SKY";
+            if (tail == "SKZ") return "16dot_SKZ";
+            if (tail == "T") return "16dot_T";
+            if (tail == "TA") return "16dot_TA";
+            if (tail == "TAX") return "16dot_TAX";
+            if (tail == "TAY") return "16dot_TAY";
+            if (tail == "TAZ") return "16dot_TAZ";
+            if (tail == "TB") return "16dot_TB";
+            if (tail == "TBX") return "16dot_TBX";
+            if (tail == "TBY") return "16dot_TBY";
+            if (tail == "TBZ") return "16dot_TBZ";
+            if (tail == "TC") return "16dot_TC";
+            if (tail == "TCX") return "16dot_TCX";
+            if (tail == "TCY") return "16dot_TCY";
+            if (tail == "TCZ") return "16dot_TCZ";
+            if (tail == "TD") return "16dot_TD";
+            if (tail == "TDX") return "16dot_TDX";
+            if (tail == "TDY") return "16dot_TDY";
+            if (tail == "TDZ") return "16dot_TDZ";
+            if (tail == "TX") return "16dot_TX";
+            if (tail == "TXX") return "16dot_TXX";
+            if (tail == "TXY") return "16dot_TXY";
+            if (tail == "TXZ") return "16dot_TXZ";
             if (tail == "X") return "16dot_X";
             if (tail == "Y") return "16dot_Y";
             if (tail == "Z") return "16dot_Z";
-            if (tail == "AX") return "16dot_AX";
-            if (tail == "BX") return "16dot_BX";
-            if (tail == "CX") return "16dot_CX";
-            if (tail == "KX") return "16dot_KX";
-            if (tail == "AY") return "16dot_AY";
-            if (tail == "BY") return "16dot_BY";
-            if (tail == "CY") return "16dot_CY";
-            if (tail == "KY") return "16dot_KY";
-            if (tail == "AZ") return "16dot_AZ";
-            if (tail == "BZ") return "16dot_BZ";
-            if (tail == "CZ") return "16dot_CZ";
-            if (tail == "KZ") return "16dot_KZ";
+            if (tail == "TX") return "16dot_X";
+            if (tail == "TY") return "16dot_Y";
+            if (tail == "TZ") return "16dot_Z";
             return "16dot_Null";
         }
 
