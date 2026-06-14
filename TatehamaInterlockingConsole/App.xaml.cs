@@ -63,7 +63,7 @@ namespace TatehamaInterlockingConsole
                                 ClientId = "MultiATS_Client",
                                 RedirectUri = new Uri("/", UriKind.Relative),
                             });
-                        }); 
+                        });
 
                     // 必要なサービスの登録
                     services.AddSingleton(TimeService.Instance);
