@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenIddict.Client;
 using TatehamaInterlockingConsole.Manager;
+using TatehamaInterlockingConsole.Models;
 using TatehamaInterlockingConsole.Services;
 using TatehamaInterlockingConsole.ViewModels;
 using TatehamaInterlockingConsole.Views;
@@ -63,7 +64,7 @@ namespace TatehamaInterlockingConsole
                                 ClientId = "MultiATS_Client",
                                 RedirectUri = new Uri("/", UriKind.Relative),
                             });
-                        }); 
+                        });
 
                     // 必要なサービスの登録
                     services.AddSingleton(TimeService.Instance);

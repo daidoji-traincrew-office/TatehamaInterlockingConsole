@@ -27,7 +27,7 @@ namespace TatehamaInterlockingConsole.Models
         private readonly DataManager _dataManager;
         private readonly DataUpdateViewModel _dataUpdateViewModel;
         private readonly TimeService _timeService;
-        private static HubConnection _connection;
+        private HubConnection _connection;
         private static bool _isUpdateLoopRunning = false;
         private const string HubConnectionName = "interlocking";
 
@@ -38,6 +38,7 @@ namespace TatehamaInterlockingConsole.Models
         private const int ReconnectIntervalMs = 500;
         private string _connectionId = "";
         private TimeSpan _timeOffset = TimeSpan.FromHours(0);
+        private readonly SemaphoreSlim _connectionLock = new SemaphoreSlim(1, 1);
 
         /// <summary>
         /// サーバー接続状態変更イベント
@@ -93,7 +94,7 @@ namespace TatehamaInterlockingConsole.Models
             }
 
             await DisposeAndStopConnectionAsync(CancellationToken.None); // 古いクライアントを破棄
-            InitializeConnection(); // 新しいクライアントを初期化
+            await InitializeConnectionAsync(); // 新しいクライアントを初期化 ★修正1
             // 接続を試みる
             var isActionNeeded = await ConnectAsync();
             if (isActionNeeded)
@@ -170,14 +171,23 @@ namespace TatehamaInterlockingConsole.Models
         /// <summary>
         /// HubConnection初期化
         /// </summary>
-        private void InitializeConnection()
+        private async Task InitializeConnectionAsync()
         {
-            if (_connection != null)
+            await _connectionLock.WaitAsync();
+            try
             {
-                throw new InvalidOperationException("_connection is already initialized.");
+                await InitializeConnectionCoreAsync();
             }
+            finally
+            {
+                _connectionLock.Release();
+            }
+        }
 
-            // HubConnectionの作成
+        private async Task InitializeConnectionCoreAsync()
+        {
+            // ロック取得済みの前提で呼ぶ（ロック不要）
+            if (_connection != null) return;
             _connection = new HubConnectionBuilder()
                 .WithUrl($"{ServerAddress.SignalAddress}/hub/{HubConnectionName}?access_token={_token}")
                 .Build();
@@ -190,12 +200,28 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns>ユーザーのアクションが必要かどうか</returns>
         private async Task<bool> ConnectAsync()
         {
-            // サーバー接続
+            await _connectionLock.WaitAsync(); // ★ロックを追加
+            try
+            {
+                await InitializeConnectionCoreAsync(); // ★ロック取得済み版を呼ぶ
+            }
+            finally
+            {
+                _connectionLock.Release();
+            }
+
             while (!_dataManager.ServerConnected)
             {
+                // whileループ内は_connectionのローカルコピーを使用してさらに安全に
+                var conn = _connection;
+                if (conn == null)
+                {
+                    await InitializeConnectionAsync();
+                    continue;
+                }
                 try
                 {
-                    await _connection.StartAsync();
+                    await conn.StartAsync();
                     Debug.WriteLine("Connected");
                     _dataManager.ServerConnected = true;
                 }
@@ -214,7 +240,7 @@ namespace TatehamaInterlockingConsole.Models
                     ConnectionStatusChanged?.Invoke(false);
                     // 一旦接続を破棄して再初期化
                     await DisposeAndStopConnectionAsync(CancellationToken.None);
-                    InitializeConnection();
+                    await InitializeConnectionAsync(); // ★修正2
                 }
                 catch (Exception exception)
                 {
@@ -344,7 +370,7 @@ namespace TatehamaInterlockingConsole.Models
                 Debug.WriteLine("Try refresh token...");
                 await RefreshTokenAsync(CancellationToken.None);
                 await DisposeAndStopConnectionAsync(CancellationToken.None);
-                InitializeConnection();
+                await InitializeConnectionAsync(); // ★修正3
                 var isActionNeeded = await ConnectAsync();
                 if (isActionNeeded)
                 {
@@ -421,24 +447,28 @@ namespace TatehamaInterlockingConsole.Models
         /// <returns></returns>
         private async Task DisposeAndStopConnectionAsync(CancellationToken cancellationToken)
         {
-            if (_connection == null)
-            {
-                return;
-            }
-
+            await _connectionLock.WaitAsync(); // ★ロックを追加
             try
             {
-                await _connection.StopAsync(cancellationToken);
-                await _connection.DisposeAsync();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error disposing connection: {ex.Message}");
+                if (_connection == null) return;
+                try
+                {
+                    await _connection.StopAsync(cancellationToken);
+                    await _connection.DisposeAsync();
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error disposing connection: {ex.Message}");
+                }
+                finally
+                {
+                    _connection = null;
+                    _eventHandlersSet = false;
+                }
             }
             finally
             {
-                _connection = null;
-                _eventHandlersSet = false;
+                _connectionLock.Release(); // ★リリース
             }
         }
 

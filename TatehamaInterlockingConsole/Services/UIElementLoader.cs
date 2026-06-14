@@ -32,8 +32,16 @@ namespace TatehamaInterlockingConsole.Services
             // UIContolSettingに変換
             foreach (var filePath in matchingFiles)
             {
-                var settings = UIControlSettingLoader.LoadSettings(filePath);
-                allSettings.AddRange(settings);
+                try
+                {
+                    var settings = UIControlSettingLoader.LoadSettings(filePath);
+                    allSettings.AddRange(settings);
+                }
+                catch (Exception ex)
+                {
+                    CustomMessage.Show(ex.ToString(), "エラー");
+                    return new List<UIControlSetting>(); // null の代わりに空リストを返す
+                }
             }
             return allSettings;
         }
