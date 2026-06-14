@@ -3,9 +3,9 @@ BackImage	連動盤										0	0														Image/BackImage/TH65_Daidoji.png
 Image	Clock_Base										1400	78	79	110												Image/Clock/Clock_Border.png	
 ClockImage	Clock_Meter	Clock_Base									6	37	63	63											Image/Clock/Clock_Base.png	Image/Clock/Clock_HourHand.png,Image/Clock/Clock_MinuteHand.png,Image/Clock/Clock_SecondHand.png,Image/Clock/Clock_Cover.png	
 Image	Hook										1411	10														Image/Hook/Hook_Base.png	
-LeverImage	1RT		物理てこ	TH65_1							303	388										1R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	0代X=てこ赤(X)N(X)　例：1R=てこ赤NR
-Image	1RTA_G		信号機表示灯	大道寺上り場内1RTA							375	368											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
-Image	1RTB_G		信号機表示灯	大道寺上り場内1RTB							367	386											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
+LeverImage	1R		物理てこ	TH65_1							303	388										1R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	0代X=てこ赤(X)N(X)　例：1R=てこ赤NR
+Image	1RA_G		信号機表示灯	大道寺上り場内1RTA							375	368											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
+Image	1RB_G		信号機表示灯	大道寺上り場内1RTB							367	386											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
 TextBlock	1R_Label	1R									14	20	11	11				1	10	Transparent	#FFBCBCBC	1R					
 LeverImage	2R		物理てこ	TH65_2							656	388										2R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
 Image	2R_G		信号機表示灯	大道寺上り場内2R							722	387											0,1	0		Image/Light/N.png,Image/Light/G.png	
