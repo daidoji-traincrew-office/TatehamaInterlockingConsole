@@ -29,6 +29,28 @@ namespace TatehamaInterlockingConsole.ViewModels
         public event Action<List<UIControlSetting>> NotifyUpdateControlEvent;
 
         /// <summary>
+        /// 強制更新イベント（差分比較なし）
+        /// </summary>
+        public event Action<List<UIControlSetting>> ForceUpdateControlEvent;
+
+        private bool _isLampTestMode = false;
+        /// <summary>
+        /// 全点灯テストモードフラグ（trueの場合は全表示灯を点灯）
+        /// </summary>
+        public bool IsLampTestMode
+        {
+            get => _isLampTestMode;
+            set
+            {
+                if (_isLampTestMode != value)
+                {
+                    _isLampTestMode = value;
+                    SetAllLampTestMode(value);
+                }
+            }
+        }
+
+        /// <summary>
         /// コンストラクタ
         /// </summary>
         public DataUpdateViewModel()
@@ -421,8 +443,8 @@ namespace TatehamaInterlockingConsole.ViewModels
                 item.ImageIndex = trackCircuit?.On == true ? 2 : 1;
             }
         }
-        
-         /// <summary>
+
+        /// <summary>
         /// 駅扱切換表示灯の更新処理
         /// </summary>
         /// <param name="item"></param>
@@ -873,6 +895,63 @@ namespace TatehamaInterlockingConsole.ViewModels
             {
                 CustomMessage.Show(ex.ToString(), "エラー");
                 throw;
+            }
+        }
+
+        /// <summary>
+        /// 全表示灯を点灯させるテスト用メソッド
+        /// </summary>
+        public void TurnOnAllLamps()
+        {
+            var allSettingList = new List<UIControlSetting>(_dataManager.AllControlSettingList);
+
+            foreach (var item in allSettingList)
+            {
+                // 表示灯系のコントロールのみ対象
+                if (item.ServerType.Contains("表示灯"))
+                {
+                    item.ImageIndex = 1;
+                }
+            }
+
+            // 変更通知イベント発火
+            if (Application.Current?.Dispatcher != null)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    var handler = NotifyUpdateControlEvent;
+                    handler?.Invoke(allSettingList);
+                });
+            }
+        }
+
+        /// <summary>
+        /// 全表示灯の点灯テストモードを設定するメソッド
+        /// （true=全点灯, false=全消灯に戻す）
+        /// </summary>
+        /// <param name="turnOn">trueで全点灯、falseで全消灯</param>
+        private void SetAllLampTestMode(bool turnOn)
+        {
+            var allSettingList = new List<UIControlSetting>(_dataManager.AllControlSettingList);
+
+            foreach (var item in allSettingList)
+            {
+                if (!item.ServerType.Contains("表示灯")) continue;
+
+                // ImagePathsに対象インデックスが存在する場合のみ設定
+                int targetIndex = turnOn ? 1 : 0;
+                if (item.ImagePaths.ContainsKey(targetIndex))
+                {
+                    item.ImageIndex = targetIndex;
+                }
+            }
+
+            if (Application.Current?.Dispatcher != null)
+            {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    ForceUpdateControlEvent?.Invoke(allSettingList);
+                });
             }
         }
     }

@@ -107,6 +107,7 @@ namespace TatehamaInterlockingConsole.ViewModels
                 _sound = sound;                                                                 // サウンド管理クラスのインスタンス
                 _dataUpdateViewModel = dataUpdateViewModel;                                     // データ更新ViewModelのインスタンス
                 _dataUpdateViewModel.NotifyUpdateControlEvent += OnNotifyUpdateControlEvent;    // データ更新イベントの登録
+                _dataUpdateViewModel.ForceUpdateControlEvent += OnForceUpdateControlEvent;  // 追加
                 _stationName = DataHelper.ExtractStationNameFromFilePath(filePath);             // ファイルパスから駅名を抽出
                 _stationNumber = DataHelper.GetStationNumberFromStationName(_stationName);      // 駅名から駅番号を取得
 
@@ -167,6 +168,20 @@ namespace TatehamaInterlockingConsole.ViewModels
         }
 
         /// <summary>
+        /// DataUpdateViewModelでの強制更新通知受け取り処理（差分比較なし）
+        /// </summary>
+        /// <param name="updateList"></param>
+        public void OnForceUpdateControlEvent(List<UIControlSetting> updateList)
+        {
+            // 駅毎の連動盤に対応する設定データを取得
+            var stationSettingList = updateList.FindAll(list => list.StationName == _stationName);
+            var newElements = UIElementLoader.CreateUIControlModels(stationSettingList);
+
+            // 差分比較せず強制更新
+            StationElements = new ObservableCollection<UIElement>(newElements);
+        }
+
+        /// <summary>
         /// 非同期タイマーを開始するメソッド
         /// </summary>
         private async void StartClockUpdateTimerAsync()
@@ -215,6 +230,7 @@ namespace TatehamaInterlockingConsole.ViewModels
 
             // イベント解除
             _dataUpdateViewModel.NotifyUpdateControlEvent -= OnNotifyUpdateControlEvent;
+            _dataUpdateViewModel.ForceUpdateControlEvent -= OnForceUpdateControlEvent;  // 追加
 
             // 駅名をリストから削除
             _dataManager.RemoveActiveStation(_stationNumber);
