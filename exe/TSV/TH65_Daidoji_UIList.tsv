@@ -1,388 +1,375 @@
-�E�Type	UniqueName	ParentName	ServerType	ServerName	PointNameA	PointValueA	PointNameB	PointValueB	DirectionName	DirectionValue	X	Y	Width	Height	Angle	AngleOriginX	AngleOriginY	Text	FontSize	BackColor	TextColor	ClickEventName	ImagePattern	ImageIndex	BaseImagePath	ImagePath	Remark								
-BackImage	連動盤										0	0														Image/BackImage/TH65_Daidoji.png									
-Image	Clock_Base										1400	78	79	110												Image/Clock/Clock_Border.png									
-ClockImage	Clock_Meter	Clock_Base									6	37	63	63											Image/Clock/Clock_Base.png	Image/Clock/Clock_HourHand.png,Image/Clock/Clock_MinuteHand.png,Image/Clock/Clock_SecondHand.png,Image/Clock/Clock_Cover.png									
-Image	Hook										1411	10														Image/Hook/Hook_Base.png									
-LeverImage	1RT		物琁E��ぁETH65_1							303	388										1R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	0代X=てこ赤(X)N(X)　例！ER=てこ赤NR								
-Image	1RTA_G		信号機表示灯	大道寺上り場冁ER							375	368											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色								
-Image	1RTB_G										367	386											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色								
-TextBlock	1R_Label	1R									14	20	11	11				1	10	Transparent	#FFBCBCBC	1R													
-LeverImage	2R		物琁E��ぁETH65_2							656	388										2R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	2R_G		信号機表示灯	大道寺上り場冁ER							722	387											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	2R_Label	2R									14	20	11	11				2	10	Transparent	#FFBCBCBC	2R													
-LeverImage	2RZ		物琁E��ぁETH65_2Z							608	388										2RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png	0代XZ=てこ桁EX)N(X)Z　例！ERZ=てこ桃NR								
-Image	2RZ_Y		信号機表示灯								623	377											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	2RZ_Label	2RZ									14	20	11	11				2Z	10	Transparent	#FFBCBCBC	2RZ													
-LeverImage	3R		物琁E��ぁETH65_3							656	448										3R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	3R_G		信号機表示灯	大道寺上り場冁ER							722	454											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	3R_Label	3R									14	20	11	11				3	10	Transparent	#FFBCBCBC	3R													
-LeverImage	3RZ		物琁E��ぁETH65_3Z							608	448										3RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png									
-Image	3RZ_Y		信号機表示灯								623	437											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	3RZ_Label	3RZ									14	20	11	11				3Z	10	Transparent	#FFBCBCBC	3RZ													
-LeverImage	4R		物琁E��ぁETH65_4							656	508										4R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	4R_G		信号機表示灯	大道寺上り場冁ER							722	560											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	4R_Label	4R									14	20	11	11				4	10	Transparent	#FFBCBCBC	4R													
-LeverImage	4RZ		物琁E��ぁETH65_4Z							608	508										4RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png									
-Image	4RZ_Y		信号機表示灯								623	497											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	4RZ_Label	4RZ									14	20	11	11				4Z	10	Transparent	#FFBCBCBC	4RZ													
-LeverImage	5L		物琁E��ぁETH65_5							714	508										5L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png									
-Image	5L_G		信号機表示灯	大道寺下り出発5L							678	551											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	5L_Label	5L									14	20	11	11				5	10	Transparent	#FFBCBCBC	5L													
-LeverImage	6L		物琁E��ぁETH65_6							714	622										6L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png									
-Image	6L_G		信号機表示灯	大道寺下り出発6L							678	658											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	6L_Label	6L									14	20	11	11				6	10	Transparent	#FFBCBCBC	6L													
-LeverImage	7R		物琁E��ぁETH65_7							1126	388										7R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	7R_G		信号機表示灯	大道寺上り出発7R							1203	394											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	7R_Label	7R									14	20	11	11				7	10	Transparent	#FFBCBCBC	7R													
-LeverImage	8R		物琁E��ぁETH65_8							1126	448										8R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	8R_G		信号機表示灯	大道寺上り出発8R							1203	454											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	8R_Label	8R									14	20	11	11				8	10	Transparent	#FFBCBCBC	8R													
-LeverImage	9R		物琁E��ぁETH65_9							1106	508										9R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	9R_G		信号機表示灯	大道寺上り出発9R							1183	568											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	9R_Label	9R									14	20	11	11				9	10	Transparent	#FFBCBCBC	9R													
-LeverImage	10R		物琁E��ぁETH65_10							1106	622										10R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png									
-Image	10R_G		信号機表示灯	大道寺上り出発10R							1183	607											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	10R_Label	10R									14	20	11	11				10	10	Transparent	#FFBCBCBC	10R													
-LeverImage	11L		物琁E��ぁETH65_11							1164	508										11L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png									
-Image	11L_G		信号機表示灯	大道寺下り場冁E1L							1117	551											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	11L_Label	11L									14	20	11	11				11	10	Transparent	#FFBCBCBC	11L													
-LeverImage	11LZ		物琁E��ぁETH65_11Z							1212	508										11LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png									
-Image	11LZ_Y		信号機表示灯								1227	497											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	11LZ_Label	11LZ									14	20	11	11				11Z	10	Transparent	#FFBCBCBC	11LZ													
-LeverImage	12L		物琁E��ぁETH65_12							1164	622										12L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png									
-Image	12L_G		信号機表示灯	大道寺下り場冁E2L							1117	596											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	12L_Label	12L									14	20	11	11				12	10	Transparent	#FFBCBCBC	12L													
-LeverImage	12LZ		物琁E��ぁETH65_12Z							1212	622										12LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png									
-Image	12LZ_Y		信号機表示灯								1227	611											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	12LZ_Label	12LZ									14	20	11	11				12Z	10	Transparent	#FFBCBCBC	12LZ													
-LeverImage	13L		物琁E��ぁETH65_13							2370	388										13L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png									
-Image	13LC_G		信号機表示灯	大道寺下り場冁E3LC							2342	349											0,1	0		Image/Light/N.png,Image/Light/G.png									
-Image	13LD_G		信号機表示灯	大道寺下り場冁E3LD							2334	367											0,1	0		Image/Light/N.png,Image/Light/G.png									
-TextBlock	13L_Label	13L									14	20	11	11				13	10	Transparent	#FFBCBCBC	13L													
-LeverImage	14L		物琁E��ぁETH65_14							2435	388										14L	-1,1	-1	Image/Lever/LeverBase_LR.png	Image/Lever/Lever_White_L.png,Image/Lever/Lever_White_R.png	14Lは方向てこ　白LR								
-TextBlock	14L_Label	14L									14	20	11	11				14	10	Transparent	#FFBCBCBC	14L													
-LeverImage	21R		物琁E��ぁETH65_21							1068	388										21R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	20代X=てこ緁EX)N(X)　例！E1R=てこ緑NR								
-Image	21R_Y		信号機表示灯	大道寺入揁E1R							1185	393											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	21R_Label	21R									14	20	11	11				21	10	Transparent	#FFBCBCBC	21R													
-LeverImage	21RZ		物琁E��ぁETH65_21Z							1010	388										21RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	20代XZ=てこ黁EX)N(X)Z　例！ERZ=てこ黄NR								
-Image	21RZ_Y		信号機表示灯								1025	377											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	21RZ_Label	21RZ									14	20	11	11				21Z	10	Transparent	#FFBCBCBC	21RZ													
-LeverImage	22R		物琁E��ぁETH65_22							1068	448										22R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	22R_Y		信号機表示灯	大道寺入揁E2R							1185	453											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	22R_Label	22R									14	20	11	11				22	10	Transparent	#FFBCBCBC	22R													
-LeverImage	22RZ		物琁E��ぁETH65_22Z							1010	448										22RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	22RZ_Y		信号機表示灯								1025	437											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	22RZ_Label	22RZ									14	20	11	11				22Z	10	Transparent	#FFBCBCBC	22RZ													
-LeverImage	23R		物琁E��ぁETH65_23							1058	508										23R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	23R_Y		信号機表示灯	大道寺入揁E3R							1165	567											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	23R_Label	23R									14	20	11	11				23	10	Transparent	#FFBCBCBC	23R													
-LeverImage	23RZ		物琁E��ぁETH65_23Z							1010	508										23RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	23RZ_Y		信号機表示灯								1025	497											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	23RZ_Label	23RZ									14	20	11	11				23Z	10	Transparent	#FFBCBCBC	23RZ													
-LeverImage	24R		物琁E��ぁETH65_24							1058	622										24R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	24R_Y		信号機表示灯	大道寺入揁E4R							1165	606											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	24R_Label	24R									14	20	11	11				24	10	Transparent	#FFBCBCBC	24R													
-LeverImage	24RZ		物琁E��ぁETH65_24Z							1010	622										24RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	24RZ_Y		信号機表示灯								1025	611											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	24RZ_Label	24RZ									14	20	11	11				24Z	10	Transparent	#FFBCBCBC	24RZ													
-LeverImage	25R		物琁E��ぁETH65_25							1106	686										25R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	25R_Y		信号機表示灯	大道寺入揁E5R							1165	691											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	25R_Label	25R									14	20	11	11				25	10	Transparent	#FFBCBCBC	25R													
-LeverImage	25RZ		物琁E��ぁETH65_25Z							1048	686										25RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	25RZ_Y		信号機表示灯								1063	675											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	25RZ_Label	25RZ									14	20	11	11				25Z	10	Transparent	#FFBCBCBC	25RZ													
-LeverImage	26R		物琁E��ぁETH65_26							1106	746										26R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	26R_Y		信号機表示灯	大道寺入揁E6R							1165	751											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	26R_Label	26R									14	20	11	11				26	10	Transparent	#FFBCBCBC	26R													
-LeverImage	26RZ		物琁E��ぁETH65_26Z							1048	746										26RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	26RZ_Y		信号機表示灯								1063	735											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	26RZ_Label	26RZ									14	20	11	11				26Z	10	Transparent	#FFBCBCBC	26RZ													
-LeverImage	27L		物琁E��ぁETH65_27							1260	508										27L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png									
-Image	27L_Y		信号機表示灯	大道寺入揁E7L							1135	552											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	27L_Label	27L									14	20	11	11				27	10	Transparent	#FFBCBCBC	27L													
-LeverImage	27LZ		物琁E��ぁETH65_27Z							1308	508										27LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png									
-Image	27LZ_Y		信号機表示灯								1323	497											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	27LZ_Label	27LZ									14	20	11	11				27Z	10	Transparent	#FFBCBCBC	27LZ													
-LeverImage	28L		物琁E��ぁETH65_28							1260	622										28L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png									
-Image	28L_Y		信号機表示灯	大道寺入揁E8L							1135	597											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	28L_Label	28L									14	20	11	11				28	10	Transparent	#FFBCBCBC	28L													
-LeverImage	28LZ		物琁E��ぁETH65_28Z							1308	622										28LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png									
-Image	28LZ_Y		信号機表示灯								1323	611											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	28LZ_Label	28LZ									14	20	11	11				28Z	10	Transparent	#FFBCBCBC	28LZ													
-LeverImage	29L		物琁E��ぁETH65_29							1704	448										29L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png									
-Image	29L_Y		信号機表示灯	大道寺入揁E9L							1675	489											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	29L_Label	29L									14	20	11	11				29	10	Transparent	#FFBCBCBC	29L													
-LeverImage	29LZ		物琁E��ぁETH65_29Z							1752	448										29LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png									
-Image	29LZ_Y		信号機表示灯								1767	437											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	29LZ_Label	29LZ									14	20	11	11				29Z	10	Transparent	#FFBCBCBC	29LZ													
-LeverImage	30R		物琁E��ぁETH65_30							1902	448										30R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png									
-Image	30R_Y		信号機表示灯	大道寺入揁E0R							1961	483											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	30R_Label	30R									14	20	11	11				30	10	Transparent	#FFBCBCBC	30R													
-LeverImage	30RZ		物琁E��ぁETH65_30Z							1854	448										30RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png									
-Image	30RZ_Y		信号機表示灯								1869	437											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	30RZ_Label	30RZ									14	20	11	11				30Z	10	Transparent	#FFBCBCBC	30RZ													
-LeverImage	31L		物琁E��ぁETH65_31							2054	388										31L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png									
-Image	31L_Y		信号機表示灯	大道寺入揁E1L							2025	395											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	31L_Label	31L									14	20	11	11				31	10	Transparent	#FFBCBCBC	31L													
-LeverImage	31LZ		物琁E��ぁETH65_31Z							2102	388										31LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png									
-Image	31LZ_Y		信号機表示灯								2117	377											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	31LZ_Label	31LZ									14	20	11	11				31Z	10	Transparent	#FFBCBCBC	31LZ													
-LeverImage	32L		物琁E��ぁETH65_32							2054	448										32L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png									
-Image	32L_Y		信号機表示灯	大道寺入揁E2L							2025	485											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	32L_Label	32L									14	20	11	11				32	10	Transparent	#FFBCBCBC	32L													
-LeverImage	32LZ		物琁E��ぁETH65_32Z							2102	448										32LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png									
-Image	32LZ_Y		信号機表示灯								2117	437											0,1	0		Image/Light/N.png,Image/Light/Y.png									
-TextBlock	32LZ_Label	32LZ									14	20	11	11				32Z	10	Transparent	#FFBCBCBC	32LZ													
-ButtonImage	T		着点ボタン	TH65_TP							360	461										T	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	T_Label	T									5	23	15	12				T	10	Transparent	#FFBCBCBC	T													
-ButtonImage	TA		着点ボタン	TH65_TAP							564	401										TA	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	TA_Label	TA									5	23	15	12				TA	10	Transparent	#FFBCBCBC	TA													
-ButtonImage	TB		着点ボタン	TH65_TBP							564	461										TB	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	TB_Label	TB									5	23	15	12				TB	10	Transparent	#FFBCBCBC	TB													
-ButtonImage	TC		着点ボタン	TH65_TCP							564	521										TC	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	TC_Label	TC									5	23	15	12				TC	10	Transparent	#FFBCBCBC	TC													
-ButtonImage	A		着点ボタン	TH65_AP							966	401										A	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	A_Label	A									5	23	15	12				A	10	Transparent	#FFBCBCBC	A													
-ButtonImage	B		着点ボタン	TH65_BP							966	461										B	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	B_Label	B									5	23	15	12				B	10	Transparent	#FFBCBCBC	B													
-ButtonImage	C		着点ボタン	TH65_CP							966	521										C	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	C_Label	C									5	23	15	12				C	10	Transparent	#FFBCBCBC	C													
-ButtonImage	D		着点ボタン	TH65_DP							966	635										D	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	D_Label	D									5	23	15	12				D	10	Transparent	#FFBCBCBC	D													
-ButtonImage	5		着点ボタン	TH65_5P							1004	699										5	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	5_Label	5									5	23	15	12				5	10	Transparent	#FFBCBCBC	5													
-ButtonImage	6		着点ボタン	TH65_6P							1004	759										6	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	6_Label	6									5	23	15	12				6	10	Transparent	#FFBCBCBC	6													
-ButtonImage	SC		着点ボタン	TH65_SCP							1366	521										SC	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	SC_Label	SC									5	23	15	12				SC	10	Transparent	#FFBCBCBC	SC													
-ButtonImage	SD		着点ボタン	TH65_SDP							1366	635										SD	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	SD_Label	SD									5	23	15	12				SD	10	Transparent	#FFBCBCBC	SD													
-ButtonImage	E		着点ボタン	TH65_EP							1810	461										E	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	E_Label	E									5	23	15	12				E	10	Transparent	#FFBCBCBC	E													
-ButtonImage	X		着点ボタン	TH65_XP							2319	401										X	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	X_Label	X									5	23	15	12				X	10	Transparent	#FFBCBCBC	X													
-ButtonImage	Y		着点ボタン	TH65_YP							2319	461										Y	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png									
-TextBlock	Y_Label	Y									5	23	15	12				Y	10	Transparent	#FFBCBCBC	Y													
-ButtonImage	警報上り接迁E									404	911										警報上り接迁E0,1	0	Image/Button/ApproachingButton_Base.png	Image/Button/ApproachingButton_Green_OFF.png,Image/Button/ApproachingButton_Green_ON.png									
-ButtonImage	警報下り接迁E									2131	911										警報下り接迁E0,1	0	Image/Button/ApproachingButton_Base.png	Image/Button/ApproachingButton_Green_OFF.png,Image/Button/ApproachingButton_Green_ON.png									
-LeverImage	W41		物琁E��ぁETH65_41							389	64										P41	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	転てつ器単独てこ�ENCR								
-Image	W41_PG		転てつ器表示灯		TH65_W41	N					387	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W41_PY		転てつ器表示灯		TH65_W41	R					421	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W41_Label	W41									14	20	11	11				41	10	Transparent	#FFBCBCBC	P41													
-LeverImage	W42		物琁E��ぁETH65_42							457	64										P42	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W42_PG		転てつ器表示灯		TH65_W42	N					455	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W42_PY		転てつ器表示灯		TH65_W42	R					489	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W42_Label	W42									14	20	11	11				42	10	Transparent	#FFBCBCBC	P42													
-LeverImage	W43		物琁E��ぁETH65_43							525	64										P43	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W43_PG		転てつ器表示灯		TH65_W43	N					523	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W43_PY		転てつ器表示灯		TH65_W43	R					557	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W43_Label	W43									14	20	11	11				43	10	Transparent	#FFBCBCBC	P43													
-LeverImage	W44		物琁E��ぁETH65_44							1535	64										P44	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W44_PG		転てつ器表示灯		TH65_W44	N					1533	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W44_PY		転てつ器表示灯		TH65_W44	R					1567	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W44_Label	W44									14	20	11	11				44	10	Transparent	#FFBCBCBC	P44													
-LeverImage	W45		物琁E��ぁETH65_45							1603	64										P45	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W45_PG		転てつ器表示灯		TH65_W45	N					1601	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W45_PY		転てつ器表示灯		TH65_W45	R					1635	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W45_Label	W45									14	20	11	11				45	10	Transparent	#FFBCBCBC	P45													
-LeverImage	W46		物琁E��ぁETH65_46							1671	64										P46	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W46_PG		転てつ器表示灯		TH65_W46	N					1669	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W46_PY		転てつ器表示灯		TH65_W46	R					1703	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W46_Label	W46									14	20	11	11				46	10	Transparent	#FFBCBCBC	P46													
-LeverImage	W47		物琁E��ぁETH65_47							1739	64										P47	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W47_PG		転てつ器表示灯		TH65_W47	N					1737	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W47_PY		転てつ器表示灯		TH65_W47	R					1771	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W47_Label	W47									14	20	11	11				47	10	Transparent	#FFBCBCBC	P47													
-LeverImage	W48		物琁E��ぁETH65_48							1807	64										P48	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W48_PG		転てつ器表示灯		TH65_W48	N					1805	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W48_PY		転てつ器表示灯		TH65_W48	R					1839	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W48_Label	W48									14	20	11	11				48	10	Transparent	#FFBCBCBC	P48													
-LeverImage	W49		物琁E��ぁETH65_49							1875	64										P49	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W49_PG		転てつ器表示灯		TH65_W49	N					1873	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W49_PY		転てつ器表示灯		TH65_W49	R					1907	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W49_Label	W49									14	20	11	11				49	10	Transparent	#FFBCBCBC	P49													
-LeverImage	W50		物琁E��ぁETH65_50							1943	64										P50	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png									
-Image	W50_PG		転てつ器表示灯		TH65_W50	N					1941	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-Image	W50_PY		転てつ器表示灯		TH65_W50	R					1975	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-TextBlock	W50_Label	W50									14	20	11	11				50	10	Transparent	#FFBCBCBC	P50													
-KeyImage	駁E��刁E��		物琁E��てぁETH65_81							2269	64										駁E��刁E��	-1,1,-11,11	1	Image/Lever/LeverBase_LR.png	Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png	駁E��刁E��はLR								
-Image	駁E��刁E��_PY		駁E��刁E��表示灯	TH65_CHRNK							2267	45											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-Image	駁E��刁E��_PG		駁E��刁E��表示灯	TH65_CHRRK							2301	45											0,1	0		Image/Light/N.png,Image/Light/PG.png									
-KeyImage	解放99		物琁E��てぁETH65_99							2367	64										解放99	0,1,10,11	0	Image/Lever/LeverBase_NR.png	Image/Lever/KeyLever_KeyOFF_N.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_N.png,Image/Lever/KeyLever_KeyON_R.png	方向てこ解放はNR								
-Image	解放99_PY		解放表示灯	TH65_99							2382	31											0,1	0		Image/Light/N.png,Image/Light/PY.png									
-Image	142T_1		軌道回路表示灯	上り142T							52	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	0度※以丁E度省略								
-Image	146T_1		軌道回路表示灯	上り146T							82	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_1RT_1		軌道回路表示灯	TH66S_1RT							112	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_51ロT_1		軌道回路表示灯	TH66S_51ロT							142	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_52T_1		軌道回路表示灯	TH66S_52T							172	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_13T_1		軌道回路表示灯	TH66S_13T							91	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_13T_2		軌道回路表示灯	TH66S_13T							173	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_54T_W54イN_W55ロN_1		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	N			197	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_54T_W54イN_W55ロN_2		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	N			227	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_54T_W54イN_W55ロR_1		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	R			219	366											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH66S_54T_W54イN_W55ロR_2		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	R			227	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_54T_W54イR_W55ロN_1		軌道回路表示灯	TH66S_54T	TH66S_W54	R	TH66S_W55	N			197	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_54T_W54イR_W55ロN_2		軌道回路表示灯	TH66S_54T	TH66S_W54	R	TH66S_W55	N			209	366											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度								
-Image	TH66S_55T_W55イN_W54ロN_1		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	N			197	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_55T_W55イN_W54ロN_2		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	N			227	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_55T_W55イN_W54ロR_1		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	R			219	391											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度								
-Image	TH66S_55T_W55イN_W54ロR_2		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	R			227	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_55T_W55イR_W54ロN_1		軌道回路表示灯	TH66S_55T	TH66S_W55	R	TH66S_W54	N			197	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH66S_55T_W55イR_W54ロN_2		軌道回路表示灯	TH66S_55T	TH66S_W55	R	TH66S_W54	N			209	391											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH66S_1RCT_1		軌道回路表示灯	TH66S_1RCT							252	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	156T_1		軌道回路表示灯	上り156T							282	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_1RT_1		軌道回路表示灯	TH65_1RT							362	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_1RT_2		軌道回路表示灯	TH65_1RT							394	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_TST_1		軌道回路表示灯	TH65_TST							266	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_TST_2		軌道回路表示灯	TH65_TST							341	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_TST_3		軌道回路表示灯	TH65_TST							413	478											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_41T_W41N_W43N_1		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41N_W43N_2		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			508	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41N_W43N_3		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			596	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41N_W43R_1		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41N_W43R_2		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			508	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41N_W43R_3		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			549	446											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_41T_W41N_W43R_4		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			596	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41R_1		軌道回路表示灯	TH65_41T	TH65_W41	R					424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_41T_W41R_2		軌道回路表示灯	TH65_41T	TH65_W41	R					455	436											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42イT_W42イN_1		軌道回路表示灯	TH65_42イT	TH65_W42	N					433	498											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42イT_W42イN_2		軌道回路表示灯	TH65_42イT	TH65_W42	N					512	577											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42イT_W42イN_3		軌道回路表示灯	TH65_42イT	TH65_W42	N					596	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_42イT_W42イR_1		軌道回路表示灯	TH65_42イT	TH65_W42	R					433	498											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42イT_W42イR_2		軌道回路表示灯	TH65_42イT	TH65_W42	R					461	501											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_42ロT_W42ロN_1		軌道回路表示灯	TH65_42ロT	TH65_W42	N					475	456											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42ロT_W42ロN_2		軌道回路表示灯	TH65_42ロT	TH65_W42	N					519	500											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42ロT_W42ロN_3		軌道回路表示灯	TH65_42ロT	TH65_W42	N					596	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_42ロT_W42ロR_1		軌道回路表示灯	TH65_42ロT	TH65_W42	R					489	501											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_42ロT_W42ロR_2		軌道回路表示灯	TH65_42ロT	TH65_W42	R					519	500											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_42ロT_W42ロR_3		軌道回路表示灯	TH65_42ロT	TH65_W42	R					596	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_2RT_1		軌道回路表示灯	TH65_2RT							754	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_2RT_2		軌道回路表示灯	TH65_2RT							998	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_3RT_1		軌道回路表示灯	TH65_3RT							754	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_3RT_4		軌道回路表示灯	TH65_3RT							998	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_11LT_1		軌道回路表示灯	TH65_11LT							754	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_11LT_2		軌道回路表示灯	TH65_11LT							998	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_12LT_1		軌道回路表示灯	TH65_12LT							754	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_12LT_2		軌道回路表示灯	TH65_12LT							998	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_5T_1		軌道回路表示灯	TH65_5T							792	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_5T_2		軌道回路表示灯	TH65_5T							1036	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_6T_1		軌道回路表示灯	TH65_6T							792	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_6T_2		軌道回路表示灯	TH65_6T							1036	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W44N_W46R_1		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1224	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W44N_W46R_2		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1358	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W44N_W46R_3		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1482	669											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_44T_W44N_W46R_4		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_44T_W44R_W46R_1		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1224	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W44R_W46R_2		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1358	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W44R_W46R_3		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1482	669											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_44T_W44R_W46R_4		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_44T_W46N_1		軌道回路表示灯	TH65_44T	TH65_W46	N					1348	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_44T_W46N_2		軌道回路表示灯	TH65_44T	TH65_W46	N					1460	609											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_44T_W46N_3		軌道回路表示灯	TH65_44T	TH65_W46	N					1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_45T_W45N_1		軌道回路表示灯	TH65_45T	TH65_W45	N					1348	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_45T_W45N_2		軌道回路表示灯	TH65_45T	TH65_W45	N					1450	499											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_45T_W45N_3		軌道回路表示灯	TH65_45T	TH65_W45	N					1520	471											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_45T_W45R_1		軌道回路表示灯	TH65_45T	TH65_W45	R					1230	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_45T_W45R_2		軌道回路表示灯	TH65_45T	TH65_W45	R					1338	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_45T_W45R_3		軌道回路表示灯	TH65_45T	TH65_W45	R					1446	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_45T_W45R_4		軌道回路表示灯	TH65_45T	TH65_W45	R					1520	471											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イN_W48ロN_1		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1545	461											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イN_W48ロN_2		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1575	449											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イN_W48ロN_3		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1605	437											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イN_W48ロR_1		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	R			1594	458											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_47T_W47イN_W48ロR_2		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	R			1605	437											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イR_W48ロN_1		軌道回路表示灯	TH65_47T	TH65_W47	R	TH65_W48	N			1545	461											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_47T_W47イR_W48ロN_2		軌道回路表示灯	TH65_47T	TH65_W47	R	TH65_W48	N			1568	470											0,1,2	0		Image/Light/158N.png,Image/Light/158Y.png,Image/Light/158R.png	158度								
-Image	TH65_48T_W48イN_W47ロN_1		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1568	523											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_48T_W48イN_W47ロN_2		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1596	505											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_48T_W48イN_W47ロN_3		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1626	493											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_48T_W48イN_W47ロN_4		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1676	473											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_48T_W48イN_W47ロR_1		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1603	484											0,1,2	0		Image/Light/158N.png,Image/Light/158Y.png,Image/Light/158R.png	158度								
-Image	TH65_48T_W48イN_W47ロR_2		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1626	493											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_48T_W48イN_W47ロR_3		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1676	473											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_48T_W48イR_W47ロN_1		軌道回路表示灯	TH65_48T	TH65_W48	R	TH65_W47	N			1568	523											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_48T_W48イR_W47ロN_2		軌道回路表示灯	TH65_48T	TH65_W48	R	TH65_W47	N			1580	493											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH65_49T_W49N_1		軌道回路表示灯	TH65_49T	TH65_W49	N					1230	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_2		軌道回路表示灯	TH65_49T	TH65_W49	N					1338	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_3		軌道回路表示灯	TH65_49T	TH65_W49	N					1446	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_4		軌道回路表示灯	TH65_49T	TH65_W49	N					1554	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_5		軌道回路表示灯	TH65_49T	TH65_W49	N					1662	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_6		軌道回路表示灯	TH65_49T	TH65_W49	N					1770	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49N_7		軌道回路表示灯	TH65_49T	TH65_W49	N					1878	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49R_1		軌道回路表示灯	TH65_49T	TH65_W49	R					1630	427											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度								
-Image	TH65_49T_W49R_2		軌道回路表示灯	TH65_49T	TH65_W49	R					1662	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49R_3		軌道回路表示灯	TH65_49T	TH65_W49	R					1770	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_49T_W49R_4		軌道回路表示灯	TH65_49T	TH65_W49	R					1878	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_ET_1		軌道回路表示灯	TH65_ET							1792	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_ET_2		軌道回路表示灯	TH65_ET							1842	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50イT_W50イN_1		軌道回路表示灯	TH65_50イT	TH65_W50	N					1959	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50イT_W50イN_2		軌道回路表示灯	TH65_50イT	TH65_W50	N					2025	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50イT_W50イR_1		軌道回路表示灯	TH65_50イT	TH65_W50	R					1959	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50イT_W50イR_2		軌道回路表示灯	TH65_50イT	TH65_W50	R					1983	429											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_50ロT_W50ロN_1		軌道回路表示灯	TH65_50ロT	TH65_W50	N					1959	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50ロT_W50ロN_2		軌道回路表示灯	TH65_50ロT	TH65_W50	N					2025	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_50ロT_W50ロR_1		軌道回路表示灯	TH65_50ロT	TH65_W50	R					2003	449											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	TH65_50ロT_W50ロR_2		軌道回路表示灯	TH65_50ロT	TH65_W50	R					2025	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_XT_1		軌道回路表示灯	TH65_XT							2142	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_XT_2		軌道回路表示灯	TH65_XT							2300	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_YT_1		軌道回路表示灯	TH65_YT							2142	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH65_YT_2		軌道回路表示灯	TH65_YT							2300	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	DF1T_1		方向てこ表示灯	DF1T					TH65_14F	N	2419	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	DF1T_2		方向てこ表示灯	DF1T					TH65_14F	N	2479	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	DF1T_14L_1		方向てこ表示灯	DF1T					TH65_14F	L	2420	388											0,1,2	0		Image/Light/45N.png,Image/Light/45Y.png,Image/Light/45R.png	45度								
-Image	DF1T_14L_2		方向てこ表示灯	DF1T					TH65_14F	L	2420	430											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	DF1T_14R_1		方向てこ表示灯	DF1T					TH65_14F	R	2480	388											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度								
-Image	DF1T_14R_2		方向てこ表示灯	DF1T					TH65_14F	R	2480	430											0,1,2	0		Image/Light/45N.png,Image/Light/45Y.png,Image/Light/45R.png	45度								
-Image	DF2T_1		軌道回路表示灯	DF2T							2207	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_21T_W21N_1		軌道回路表示灯	TH64_21T	TH64_W21	N					2232	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_21T_W21N_2		軌道回路表示灯	TH64_21T	TH64_W21	N					2264	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_21T_W21R_1		軌道回路表示灯	TH64_21T	TH64_W21	R					2232	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_21T_W21R_2		軌道回路表示灯	TH64_21T	TH64_W21	R					2254	246											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度								
-Image	TH64_12LT_1		軌道回路表示灯	TH64_12LT							2289	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_13LT_1		軌道回路表示灯	TH64_13LT							2289	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_12RT_1		軌道回路表示灯	TH64_12RT							2318	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_12RT_2		軌道回路表示灯	TH64_12RT							2400	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_15LT_1		軌道回路表示灯	TH64_15LT							2318	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_15LT_2		軌道回路表示灯	TH64_15LT							2400	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_14RT_1		軌道回路表示灯	TH64_14RT							2429	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_15RT_1		軌道回路表示灯	TH64_15RT							2429	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_22T_W22N_1		軌道回路表示灯	TH64_22T	TH64_W22	N					2454	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_22T_W22N_2		軌道回路表示灯	TH64_22T	TH64_W22	N					2484	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	TH64_22T_W22R_1		軌道回路表示灯	TH64_22T	TH64_W22	R					2466	246											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度								
-Image	TH64_22T_W22R_2		軌道回路表示灯	TH64_22T	TH64_W22	R					2484	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png									
-Image	転てつ不良_R		状態表示灯	TH65_W-FAILURE							164	45											0,1	0		Image/Light/N.png,Image/Light/R.png									
-Image	停電_R		状態表示灯	TH65_PWR-FAILURE							222	45											0,1	0		Image/Light/N.png,Image/Light/R.png									
-Image	CTC敁E��_R		状態表示灯	TH65_CTC-FAILURE							280	45											0,1	0		Image/Light/N.png,Image/Light/R.png									
-Image	鎖錠60秒_R		状態表示灯	TH65_60TEK							1256	927											0,1	0		Image/Light/N.png,Image/Light/R.png									
-Image	鎖錠30秒_R		状態表示灯	TH65_30TEK							1294	927											0,1	0		Image/Light/N.png,Image/Light/R.png									
-Retsuban	列番江ノ原信号場13番緁E	列車番号	TH66S_TTC_Track13							24	227														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番江ノ原信号場上り第1接迁E	列車番号	TH66S_TTC_Up1							24	273														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番上り第2接迁E	列車番号	TH65_TTC_Up2							174	273														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番上り第1接迁E	列車番号	TH65_TTC_Up1							324	273														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番上り場冁E	列車番号	TH65_TTC_UpArr1							511	333														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番1番緁E	列車番号	TH65_TTC_Track1							816	400														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番2番緁E	列車番号	TH65_TTC_Track2							816	460														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番3番緁E	列車番号	TH65_TTC_Track3							816	520														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番4番緁E	列車番号	TH65_TTC_Track4							816	634														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番E緁E	列車番号	TH65_TTC_TrackE							1757	507														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番X緁E	列車番号	TH65_TTC_TrackX							2161	400														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番Y緁E	列車番号	TH65_TTC_TrackY							2161	460														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番下り場冁E番		列車番号	TH65_TTC_DownArr1							1226	554														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番下り場冁E番		列車番号	TH65_TTC_DownArr2							1226	668														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番下り第1接迁E	列車番号	TH65_TTC_Down1							2105	573														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番下り第2接迁E	列車番号	TH65_TTC_Down2							2255	573														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番藤汁E番緁E	列車番号	TH64_TTC_Track1							2405	527														Image/Retsuban/Retsuban-Window.png									
-Retsuban	列番藤汁E番緁E	列車番号	TH64_TTC_Track2							2405	573														Image/Retsuban/Retsuban-Window.png									
-
-
-
-�E�Button	N	L
-Label	R	N
-TextBlock	C	R
-Image		
-BackImage		
-ClockImage		
-LeverImage		
-KeyImage		
-ButtonImage		
-Retsuban		
+Type	UniqueName	ParentName	ServerType	ServerName	PointNameA	PointValueA	PointNameB	PointValueB	DirectionName	DirectionValue	X	Y	Width	Height	Angle	AngleOriginX	AngleOriginY	Text	FontSize	BackColor	TextColor	ClickEventName	ImagePattern	ImageIndex	BaseImagePath	ImagePath	Remark
+BackImage	連動盤										0	0														Image/BackImage/TH65_Daidoji.png	
+Image	Clock_Base										1400	78	79	110												Image/Clock/Clock_Border.png	
+ClockImage	Clock_Meter	Clock_Base									6	37	63	63											Image/Clock/Clock_Base.png	Image/Clock/Clock_HourHand.png,Image/Clock/Clock_MinuteHand.png,Image/Clock/Clock_SecondHand.png,Image/Clock/Clock_Cover.png	
+Image	Hook										1411	10														Image/Hook/Hook_Base.png	
+LeverImage	1RT		物理てこ	TH65_1							303	388										1R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	0代X=てこ赤(X)N(X)　例：1R=てこ赤NR
+Image	1RTA_G		信号機表示灯	大道寺上り場内1RTA							375	368											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
+Image	1RTB_G		信号機表示灯	大道寺上り場内1RTB							367	386											0,1	0		Image/Light/N.png,Image/Light/G.png	G,Y,R,PG,PYは灯色
+TextBlock	1R_Label	1R									14	20	11	11				1	10	Transparent	#FFBCBCBC	1R					
+LeverImage	2R		物理てこ	TH65_2							656	388										2R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	2R_G		信号機表示灯	大道寺上り場内2R							722	387											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	2R_Label	2R									14	20	11	11				2	10	Transparent	#FFBCBCBC	2R					
+LeverImage	2RZ		物理てこ	TH65_2Z							608	388										2RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png	0代XZ=てこ桃(X)N(X)Z　例：2RZ=てこ桃NR
+Image	2RZ_Y		信号機表示灯								623	377											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	2RZ_Label	2RZ									14	20	11	11				2Z	10	Transparent	#FFBCBCBC	2RZ					
+LeverImage	3R		物理てこ	TH65_3							656	448										3R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	3R_G		信号機表示灯	大道寺上り場内3R							722	454											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	3R_Label	3R									14	20	11	11				3	10	Transparent	#FFBCBCBC	3R					
+LeverImage	3RZ		物理てこ	TH65_3Z							608	448										3RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png	
+Image	3RZ_Y		信号機表示灯								623	437											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	3RZ_Label	3RZ									14	20	11	11				3Z	10	Transparent	#FFBCBCBC	3RZ					
+LeverImage	4R		物理てこ	TH65_4							656	508										4R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	4R_G		信号機表示灯	大道寺上り場内4R							722	560											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	4R_Label	4R									14	20	11	11				4	10	Transparent	#FFBCBCBC	4R					
+LeverImage	4RZ		物理てこ	TH65_4Z							608	508										4RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Pink_N.png,Image/Lever/Lever_Pink_R.png	
+Image	4RZ_Y		信号機表示灯								623	497											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	4RZ_Label	4RZ									14	20	11	11				4Z	10	Transparent	#FFBCBCBC	4RZ					
+LeverImage	5L		物理てこ	TH65_5							714	508										5L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png	
+Image	5L_G		信号機表示灯	大道寺下り出発5L							678	551											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	5L_Label	5L									14	20	11	11				5	10	Transparent	#FFBCBCBC	5L					
+LeverImage	6L		物理てこ	TH65_6							714	622										6L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png	
+Image	6L_G		信号機表示灯	大道寺下り出発6L							678	658											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	6L_Label	6L									14	20	11	11				6	10	Transparent	#FFBCBCBC	6L					
+LeverImage	7R		物理てこ	TH65_7							1126	388										7R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	7R_G		信号機表示灯	大道寺上り出発7R							1203	394											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	7R_Label	7R									14	20	11	11				7	10	Transparent	#FFBCBCBC	7R					
+LeverImage	8R		物理てこ	TH65_8							1126	448										8R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	8R_G		信号機表示灯	大道寺上り出発8R							1203	454											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	8R_Label	8R									14	20	11	11				8	10	Transparent	#FFBCBCBC	8R					
+LeverImage	9R		物理てこ	TH65_9							1106	508										9R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	9R_G		信号機表示灯	大道寺上り出発9R							1183	568											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	9R_Label	9R									14	20	11	11				9	10	Transparent	#FFBCBCBC	9R					
+LeverImage	10R		物理てこ	TH65_10							1106	622										10R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Red_N.png,Image/Lever/Lever_Red_R.png	
+Image	10R_G		信号機表示灯	大道寺上り出発10R							1183	607											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	10R_Label	10R									14	20	11	11				10	10	Transparent	#FFBCBCBC	10R					
+LeverImage	11L		物理てこ	TH65_11							1164	508										11L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png	
+Image	11L_G		信号機表示灯	大道寺下り場内11L							1117	551											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	11L_Label	11L									14	20	11	11				11	10	Transparent	#FFBCBCBC	11L					
+LeverImage	11LZ		物理てこ	TH65_11Z							1212	508										11LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png	
+Image	11LZ_Y		信号機表示灯								1227	497											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	11LZ_Label	11LZ									14	20	11	11				11Z	10	Transparent	#FFBCBCBC	11LZ					
+LeverImage	12L		物理てこ	TH65_12							1164	622										12L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png	
+Image	12L_G		信号機表示灯	大道寺下り場内12L							1117	596											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	12L_Label	12L									14	20	11	11				12	10	Transparent	#FFBCBCBC	12L					
+LeverImage	12LZ		物理てこ	TH65_12Z							1212	622										12LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Pink_L.png,Image/Lever/Lever_Pink_N.png	
+Image	12LZ_Y		信号機表示灯								1227	611											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	12LZ_Label	12LZ									14	20	11	11				12Z	10	Transparent	#FFBCBCBC	12LZ					
+LeverImage	13L		物理てこ	TH65_13							2370	388										13L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Red_L.png,Image/Lever/Lever_Red_N.png	
+Image	13LC_G		信号機表示灯	大道寺下り場内13LC							2342	349											0,1	0		Image/Light/N.png,Image/Light/G.png	
+Image	13LD_G		信号機表示灯	大道寺下り場内13LD							2334	367											0,1	0		Image/Light/N.png,Image/Light/G.png	
+TextBlock	13L_Label	13L									14	20	11	11				13	10	Transparent	#FFBCBCBC	13L					
+LeverImage	14L		物理てこ	TH65_14							2435	388										14L	-1,1	-1	Image/Lever/LeverBase_LR.png	Image/Lever/Lever_White_L.png,Image/Lever/Lever_White_R.png	14Lは方向てこ　白LR
+TextBlock	14L_Label	14L									14	20	11	11				14	10	Transparent	#FFBCBCBC	14L					
+LeverImage	21R		物理てこ	TH65_21							1068	388										21R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	20代X=てこ緑(X)N(X)　例：21R=てこ緑NR
+Image	21R_Y		信号機表示灯	大道寺入換21R							1185	393											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	21R_Label	21R									14	20	11	11				21	10	Transparent	#FFBCBCBC	21R					
+LeverImage	21RZ		物理てこ	TH65_21Z							1010	388										21RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	20代XZ=てこ黄(X)N(X)Z　例：2RZ=てこ黄NR
+Image	21RZ_Y		信号機表示灯								1025	377											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	21RZ_Label	21RZ									14	20	11	11				21Z	10	Transparent	#FFBCBCBC	21RZ					
+LeverImage	22R		物理てこ	TH65_22							1068	448										22R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	22R_Y		信号機表示灯	大道寺入換22R							1185	453											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	22R_Label	22R									14	20	11	11				22	10	Transparent	#FFBCBCBC	22R					
+LeverImage	22RZ		物理てこ	TH65_22Z							1010	448										22RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	22RZ_Y		信号機表示灯								1025	437											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	22RZ_Label	22RZ									14	20	11	11				22Z	10	Transparent	#FFBCBCBC	22RZ					
+LeverImage	23R		物理てこ	TH65_23							1058	508										23R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	23R_Y		信号機表示灯	大道寺入換23R							1165	567											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	23R_Label	23R									14	20	11	11				23	10	Transparent	#FFBCBCBC	23R					
+LeverImage	23RZ		物理てこ	TH65_23Z							1010	508										23RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	23RZ_Y		信号機表示灯								1025	497											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	23RZ_Label	23RZ									14	20	11	11				23Z	10	Transparent	#FFBCBCBC	23RZ					
+LeverImage	24R		物理てこ	TH65_24							1058	622										24R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	24R_Y		信号機表示灯	大道寺入換24R							1165	606											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	24R_Label	24R									14	20	11	11				24	10	Transparent	#FFBCBCBC	24R					
+LeverImage	24RZ		物理てこ	TH65_24Z							1010	622										24RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	24RZ_Y		信号機表示灯								1025	611											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	24RZ_Label	24RZ									14	20	11	11				24Z	10	Transparent	#FFBCBCBC	24RZ					
+LeverImage	25R		物理てこ	TH65_25							1106	686										25R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	25R_Y		信号機表示灯	大道寺入換25R							1165	691											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	25R_Label	25R									14	20	11	11				25	10	Transparent	#FFBCBCBC	25R					
+LeverImage	25RZ		物理てこ	TH65_25Z							1048	686										25RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	25RZ_Y		信号機表示灯								1063	675											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	25RZ_Label	25RZ									14	20	11	11				25Z	10	Transparent	#FFBCBCBC	25RZ					
+LeverImage	26R		物理てこ	TH65_26							1106	746										26R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	26R_Y		信号機表示灯	大道寺入換26R							1165	751											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	26R_Label	26R									14	20	11	11				26	10	Transparent	#FFBCBCBC	26R					
+LeverImage	26RZ		物理てこ	TH65_26Z							1048	746										26RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	26RZ_Y		信号機表示灯								1063	735											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	26RZ_Label	26RZ									14	20	11	11				26Z	10	Transparent	#FFBCBCBC	26RZ					
+LeverImage	27L		物理てこ	TH65_27							1260	508										27L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png	
+Image	27L_Y		信号機表示灯	大道寺入換27L							1135	552											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	27L_Label	27L									14	20	11	11				27	10	Transparent	#FFBCBCBC	27L					
+LeverImage	27LZ		物理てこ	TH65_27Z							1308	508										27LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png	
+Image	27LZ_Y		信号機表示灯								1323	497											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	27LZ_Label	27LZ									14	20	11	11				27Z	10	Transparent	#FFBCBCBC	27LZ					
+LeverImage	28L		物理てこ	TH65_28							1260	622										28L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png	
+Image	28L_Y		信号機表示灯	大道寺入換28L							1135	597											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	28L_Label	28L									14	20	11	11				28	10	Transparent	#FFBCBCBC	28L					
+LeverImage	28LZ		物理てこ	TH65_28Z							1308	622										28LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png	
+Image	28LZ_Y		信号機表示灯								1323	611											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	28LZ_Label	28LZ									14	20	11	11				28Z	10	Transparent	#FFBCBCBC	28LZ					
+LeverImage	29L		物理てこ	TH65_29							1704	448										29L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png	
+Image	29L_Y		信号機表示灯	大道寺入換29L							1675	489											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	29L_Label	29L									14	20	11	11				29	10	Transparent	#FFBCBCBC	29L					
+LeverImage	29LZ		物理てこ	TH65_29Z							1752	448										29LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png	
+Image	29LZ_Y		信号機表示灯								1767	437											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	29LZ_Label	29LZ									14	20	11	11				29Z	10	Transparent	#FFBCBCBC	29LZ					
+LeverImage	30R		物理てこ	TH65_30							1902	448										30R	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Green_N.png,Image/Lever/Lever_Green_R.png	
+Image	30R_Y		信号機表示灯	大道寺入換30R							1961	483											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	30R_Label	30R									14	20	11	11				30	10	Transparent	#FFBCBCBC	30R					
+LeverImage	30RZ		物理てこ	TH65_30Z							1854	448										30RZ	0,1	0	Image/Lever/LeverBase_NR.png	Image/Lever/Lever_Yellow_N.png,Image/Lever/Lever_Yellow_R.png	
+Image	30RZ_Y		信号機表示灯								1869	437											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	30RZ_Label	30RZ									14	20	11	11				30Z	10	Transparent	#FFBCBCBC	30RZ					
+LeverImage	31L		物理てこ	TH65_31							2054	388										31L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png	
+Image	31L_Y		信号機表示灯	大道寺入換31L							2025	395											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	31L_Label	31L									14	20	11	11				31	10	Transparent	#FFBCBCBC	31L					
+LeverImage	31LZ		物理てこ	TH65_31Z							2102	388										31LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png	
+Image	31LZ_Y		信号機表示灯								2117	377											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	31LZ_Label	31LZ									14	20	11	11				31Z	10	Transparent	#FFBCBCBC	31LZ					
+LeverImage	32L		物理てこ	TH65_32							2054	448										32L	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Green_L.png,Image/Lever/Lever_Green_N.png	
+Image	32L_Y		信号機表示灯	大道寺入換32L							2025	485											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	32L_Label	32L									14	20	11	11				32	10	Transparent	#FFBCBCBC	32L					
+LeverImage	32LZ		物理てこ	TH65_32Z							2102	448										32LZ	-1,0	0	Image/Lever/LeverBase_LN.png	Image/Lever/Lever_Yellow_L.png,Image/Lever/Lever_Yellow_N.png	
+Image	32LZ_Y		信号機表示灯								2117	437											0,1	0		Image/Light/N.png,Image/Light/Y.png	
+TextBlock	32LZ_Label	32LZ									14	20	11	11				32Z	10	Transparent	#FFBCBCBC	32LZ					
+ButtonImage	T		着点ボタン	TH65_TP							360	461										T	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	T_Label	T									5	23	15	12				T	10	Transparent	#FFBCBCBC	T					
+ButtonImage	TA		着点ボタン	TH65_TAP							564	401										TA	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	TA_Label	TA									5	23	15	12				TA	10	Transparent	#FFBCBCBC	TA					
+ButtonImage	TB		着点ボタン	TH65_TBP							564	461										TB	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	TB_Label	TB									5	23	15	12				TB	10	Transparent	#FFBCBCBC	TB					
+ButtonImage	TC		着点ボタン	TH65_TCP							564	521										TC	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	TC_Label	TC									5	23	15	12				TC	10	Transparent	#FFBCBCBC	TC					
+ButtonImage	A		着点ボタン	TH65_AP							966	401										A	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	A_Label	A									5	23	15	12				A	10	Transparent	#FFBCBCBC	A					
+ButtonImage	B		着点ボタン	TH65_BP							966	461										B	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	B_Label	B									5	23	15	12				B	10	Transparent	#FFBCBCBC	B					
+ButtonImage	C		着点ボタン	TH65_CP							966	521										C	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	C_Label	C									5	23	15	12				C	10	Transparent	#FFBCBCBC	C					
+ButtonImage	D		着点ボタン	TH65_DP							966	635										D	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	D_Label	D									5	23	15	12				D	10	Transparent	#FFBCBCBC	D					
+ButtonImage	5		着点ボタン	TH65_5P							1004	699										5	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	5_Label	5									5	23	15	12				5	10	Transparent	#FFBCBCBC	5					
+ButtonImage	6		着点ボタン	TH65_6P							1004	759										6	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	6_Label	6									5	23	15	12				6	10	Transparent	#FFBCBCBC	6					
+ButtonImage	SC		着点ボタン	TH65_SCP							1366	521										SC	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	SC_Label	SC									5	23	15	12				SC	10	Transparent	#FFBCBCBC	SC					
+ButtonImage	SD		着点ボタン	TH65_SDP							1366	635										SD	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	SD_Label	SD									5	23	15	12				SD	10	Transparent	#FFBCBCBC	SD					
+ButtonImage	E		着点ボタン	TH65_EP							1810	461										E	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	E_Label	E									5	23	15	12				E	10	Transparent	#FFBCBCBC	E					
+ButtonImage	X		着点ボタン	TH65_XP							2319	401										X	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	X_Label	X									5	23	15	12				X	10	Transparent	#FFBCBCBC	X					
+ButtonImage	Y		着点ボタン	TH65_YP							2319	461										Y	0,1	0	Image/Button/ArrivalButton_Base.png	Image/Button/ArrivalButton_White_OFF.png,Image/Button/ArrivalButton_White_ON.png	
+TextBlock	Y_Label	Y									5	23	15	12				Y	10	Transparent	#FFBCBCBC	Y					
+ButtonImage	警報上り接近										404	911										警報上り接近	0,1	0	Image/Button/ApproachingButton_Base.png	Image/Button/ApproachingButton_Green_OFF.png,Image/Button/ApproachingButton_Green_ON.png	
+ButtonImage	警報下り接近										2131	911										警報下り接近	0,1	0	Image/Button/ApproachingButton_Base.png	Image/Button/ApproachingButton_Green_OFF.png,Image/Button/ApproachingButton_Green_ON.png	
+LeverImage	W41		物理てこ	TH65_41							389	64										P41	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	転てつ器単独てこはNCR
+Image	W41_PG		転てつ器表示灯		TH65_W41	N					387	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W41_PY		転てつ器表示灯		TH65_W41	R					421	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W41_Label	W41									14	20	11	11				41	10	Transparent	#FFBCBCBC	P41					
+LeverImage	W42		物理てこ	TH65_42							457	64										P42	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W42_PG		転てつ器表示灯		TH65_W42	N					455	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W42_PY		転てつ器表示灯		TH65_W42	R					489	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W42_Label	W42									14	20	11	11				42	10	Transparent	#FFBCBCBC	P42					
+LeverImage	W43		物理てこ	TH65_43							525	64										P43	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W43_PG		転てつ器表示灯		TH65_W43	N					523	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W43_PY		転てつ器表示灯		TH65_W43	R					557	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W43_Label	W43									14	20	11	11				43	10	Transparent	#FFBCBCBC	P43					
+LeverImage	W44		物理てこ	TH65_44							1535	64										P44	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W44_PG		転てつ器表示灯		TH65_W44	N					1533	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W44_PY		転てつ器表示灯		TH65_W44	R					1567	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W44_Label	W44									14	20	11	11				44	10	Transparent	#FFBCBCBC	P44					
+LeverImage	W45		物理てこ	TH65_45							1603	64										P45	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W45_PG		転てつ器表示灯		TH65_W45	N					1601	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W45_PY		転てつ器表示灯		TH65_W45	R					1635	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W45_Label	W45									14	20	11	11				45	10	Transparent	#FFBCBCBC	P45					
+LeverImage	W46		物理てこ	TH65_46							1671	64										P46	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W46_PG		転てつ器表示灯		TH65_W46	N					1669	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W46_PY		転てつ器表示灯		TH65_W46	R					1703	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W46_Label	W46									14	20	11	11				46	10	Transparent	#FFBCBCBC	P46					
+LeverImage	W47		物理てこ	TH65_47							1739	64										P47	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W47_PG		転てつ器表示灯		TH65_W47	N					1737	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W47_PY		転てつ器表示灯		TH65_W47	R					1771	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W47_Label	W47									14	20	11	11				47	10	Transparent	#FFBCBCBC	P47					
+LeverImage	W48		物理てこ	TH65_48							1807	64										P48	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W48_PG		転てつ器表示灯		TH65_W48	N					1805	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W48_PY		転てつ器表示灯		TH65_W48	R					1839	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W48_Label	W48									14	20	11	11				48	10	Transparent	#FFBCBCBC	P48					
+LeverImage	W49		物理てこ	TH65_49							1875	64										P49	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W49_PG		転てつ器表示灯		TH65_W49	N					1873	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W49_PY		転てつ器表示灯		TH65_W49	R					1907	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W49_Label	W49									14	20	11	11				49	10	Transparent	#FFBCBCBC	P49					
+LeverImage	W50		物理てこ	TH65_50							1943	64										P50	-1,0,1	0	Image/Lever/LeverBase_NCR.png	Image/Lever/Lever_Black_L.png,Image/Lever/Lever_Black_N.png,Image/Lever/Lever_Black_R.png	
+Image	W50_PG		転てつ器表示灯		TH65_W50	N					1941	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+Image	W50_PY		転てつ器表示灯		TH65_W50	R					1975	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+TextBlock	W50_Label	W50									14	20	11	11				50	10	Transparent	#FFBCBCBC	P50					
+KeyImage	駅扱切換		物理鍵てこ	TH65_81							2269	64										駅扱切換	-1,1,-11,11	1	Image/Lever/LeverBase_LR.png	Image/Lever/KeyLever_KeyOFF_L.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_L.png,Image/Lever/KeyLever_KeyON_R.png	駅扱切換はLR
+Image	駅扱切換_PY		駅扱切換表示灯	TH65_CHRNK							2267	45											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+Image	駅扱切換_PG		駅扱切換表示灯	TH65_CHRRK							2301	45											0,1	0		Image/Light/N.png,Image/Light/PG.png	
+KeyImage	解放99		物理鍵てこ	TH65_99							2367	64										解放99	0,1,10,11	0	Image/Lever/LeverBase_NR.png	Image/Lever/KeyLever_KeyOFF_N.png,Image/Lever/KeyLever_KeyOFF_R.png,Image/Lever/KeyLever_KeyON_N.png,Image/Lever/KeyLever_KeyON_R.png	方向てこ解放はNR
+Image	解放99_PY		解放表示灯	TH65_99							2382	31											0,1	0		Image/Light/N.png,Image/Light/PY.png	
+Image	142T_1		軌道回路表示灯	上り142T							52	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	0度※以下0度省略
+Image	146T_1		軌道回路表示灯	上り146T							82	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_1RT_1		軌道回路表示灯	TH66S_1RT							112	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_51ロT_1		軌道回路表示灯	TH66S_51ロT							142	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_52T_1		軌道回路表示灯	TH66S_52T							172	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_13T_1		軌道回路表示灯	TH66S_13T							91	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_13T_2		軌道回路表示灯	TH66S_13T							173	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_54T_W54イN_W55ロN_1		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	N			197	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_54T_W54イN_W55ロN_2		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	N			227	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_54T_W54イN_W55ロR_1		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	R			219	366											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH66S_54T_W54イN_W55ロR_2		軌道回路表示灯	TH66S_54T	TH66S_W54	N	TH66S_W55	R			227	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_54T_W54イR_W55ロN_1		軌道回路表示灯	TH66S_54T	TH66S_W54	R	TH66S_W55	N			197	351											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_54T_W54イR_W55ロN_2		軌道回路表示灯	TH66S_54T	TH66S_W54	R	TH66S_W55	N			209	366											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度
+Image	TH66S_55T_W55イN_W54ロN_1		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	N			197	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_55T_W55イN_W54ロN_2		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	N			227	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_55T_W55イN_W54ロR_1		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	R			219	391											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度
+Image	TH66S_55T_W55イN_W54ロR_2		軌道回路表示灯	TH66S_55T	TH66S_W55	N	TH66S_W54	R			227	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_55T_W55イR_W54ロN_1		軌道回路表示灯	TH66S_55T	TH66S_W55	R	TH66S_W54	N			197	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH66S_55T_W55イR_W54ロN_2		軌道回路表示灯	TH66S_55T	TH66S_W55	R	TH66S_W54	N			209	391											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH66S_1RCT_1		軌道回路表示灯	TH66S_1RCT							252	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	156T_1		軌道回路表示灯	上り156T							282	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_1RT_1		軌道回路表示灯	TH65_1RT							362	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_1RT_2		軌道回路表示灯	TH65_1RT							394	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_TST_1		軌道回路表示灯	TH65_TST							266	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_TST_2		軌道回路表示灯	TH65_TST							341	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_TST_3		軌道回路表示灯	TH65_TST							413	478											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_41T_W41N_W43N_1		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41N_W43N_2		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			508	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41N_W43N_3		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	N			596	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41N_W43R_1		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41N_W43R_2		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			508	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41N_W43R_3		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			549	446											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_41T_W41N_W43R_4		軌道回路表示灯	TH65_41T	TH65_W41	N	TH65_W43	R			596	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41R_1		軌道回路表示灯	TH65_41T	TH65_W41	R					424	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_41T_W41R_2		軌道回路表示灯	TH65_41T	TH65_W41	R					455	436											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42イT_W42イN_1		軌道回路表示灯	TH65_42イT	TH65_W42	N					433	498											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42イT_W42イN_2		軌道回路表示灯	TH65_42イT	TH65_W42	N					512	577											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42イT_W42イN_3		軌道回路表示灯	TH65_42イT	TH65_W42	N					596	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_42イT_W42イR_1		軌道回路表示灯	TH65_42イT	TH65_W42	R					433	498											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42イT_W42イR_2		軌道回路表示灯	TH65_42イT	TH65_W42	R					461	501											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_42ロT_W42ロN_1		軌道回路表示灯	TH65_42ロT	TH65_W42	N					475	456											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42ロT_W42ロN_2		軌道回路表示灯	TH65_42ロT	TH65_W42	N					519	500											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42ロT_W42ロN_3		軌道回路表示灯	TH65_42ロT	TH65_W42	N					596	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_42ロT_W42ロR_1		軌道回路表示灯	TH65_42ロT	TH65_W42	R					489	501											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_42ロT_W42ロR_2		軌道回路表示灯	TH65_42ロT	TH65_W42	R					519	500											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_42ロT_W42ロR_3		軌道回路表示灯	TH65_42ロT	TH65_W42	R					596	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_2RT_1		軌道回路表示灯	TH65_2RT							754	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_2RT_2		軌道回路表示灯	TH65_2RT							998	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_3RT_1		軌道回路表示灯	TH65_3RT							754	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_3RT_4		軌道回路表示灯	TH65_3RT							998	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_11LT_1		軌道回路表示灯	TH65_11LT							754	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_11LT_2		軌道回路表示灯	TH65_11LT							998	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_12LT_1		軌道回路表示灯	TH65_12LT							754	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_12LT_2		軌道回路表示灯	TH65_12LT							998	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_5T_1		軌道回路表示灯	TH65_5T							792	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_5T_2		軌道回路表示灯	TH65_5T							1036	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_6T_1		軌道回路表示灯	TH65_6T							792	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_6T_2		軌道回路表示灯	TH65_6T							1036	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W44N_W46R_1		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1224	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W44N_W46R_2		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1358	709											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W44N_W46R_3		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1482	669											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_44T_W44N_W46R_4		軌道回路表示灯	TH65_44T	TH65_W44	N	TH65_W46	R			1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_44T_W44R_W46R_1		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1224	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W44R_W46R_2		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1358	769											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W44R_W46R_3		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1482	669											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_44T_W44R_W46R_4		軌道回路表示灯	TH65_44T	TH65_W44	R	TH65_W46	R			1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_44T_W46N_1		軌道回路表示灯	TH65_44T	TH65_W46	N					1348	645											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_44T_W46N_2		軌道回路表示灯	TH65_44T	TH65_W46	N					1460	609											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_44T_W46N_3		軌道回路表示灯	TH65_44T	TH65_W46	N					1558	548											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_45T_W45N_1		軌道回路表示灯	TH65_45T	TH65_W45	N					1348	531											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_45T_W45N_2		軌道回路表示灯	TH65_45T	TH65_W45	N					1450	499											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_45T_W45N_3		軌道回路表示灯	TH65_45T	TH65_W45	N					1520	471											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_45T_W45R_1		軌道回路表示灯	TH65_45T	TH65_W45	R					1230	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_45T_W45R_2		軌道回路表示灯	TH65_45T	TH65_W45	R					1338	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_45T_W45R_3		軌道回路表示灯	TH65_45T	TH65_W45	R					1446	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_45T_W45R_4		軌道回路表示灯	TH65_45T	TH65_W45	R					1520	471											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イN_W48ロN_1		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1545	461											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イN_W48ロN_2		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1575	449											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イN_W48ロN_3		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	N			1605	437											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イN_W48ロR_1		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	R			1594	458											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_47T_W47イN_W48ロR_2		軌道回路表示灯	TH65_47T	TH65_W47	N	TH65_W48	R			1605	437											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イR_W48ロN_1		軌道回路表示灯	TH65_47T	TH65_W47	R	TH65_W48	N			1545	461											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_47T_W47イR_W48ロN_2		軌道回路表示灯	TH65_47T	TH65_W47	R	TH65_W48	N			1568	470											0,1,2	0		Image/Light/158N.png,Image/Light/158Y.png,Image/Light/158R.png	158度
+Image	TH65_48T_W48イN_W47ロN_1		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1568	523											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_48T_W48イN_W47ロN_2		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1596	505											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_48T_W48イN_W47ロN_3		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1626	493											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_48T_W48イN_W47ロN_4		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	N			1676	473											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_48T_W48イN_W47ロR_1		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1603	484											0,1,2	0		Image/Light/158N.png,Image/Light/158Y.png,Image/Light/158R.png	158度
+Image	TH65_48T_W48イN_W47ロR_2		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1626	493											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_48T_W48イN_W47ロR_3		軌道回路表示灯	TH65_48T	TH65_W48	N	TH65_W47	R			1676	473											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_48T_W48イR_W47ロN_1		軌道回路表示灯	TH65_48T	TH65_W48	R	TH65_W47	N			1568	523											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_48T_W48イR_W47ロN_2		軌道回路表示灯	TH65_48T	TH65_W48	R	TH65_W47	N			1580	493											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH65_49T_W49N_1		軌道回路表示灯	TH65_49T	TH65_W49	N					1230	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_2		軌道回路表示灯	TH65_49T	TH65_W49	N					1338	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_3		軌道回路表示灯	TH65_49T	TH65_W49	N					1446	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_4		軌道回路表示灯	TH65_49T	TH65_W49	N					1554	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_5		軌道回路表示灯	TH65_49T	TH65_W49	N					1662	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_6		軌道回路表示灯	TH65_49T	TH65_W49	N					1770	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49N_7		軌道回路表示灯	TH65_49T	TH65_W49	N					1878	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49R_1		軌道回路表示灯	TH65_49T	TH65_W49	R					1630	427											0,1,2	0		Image/Light/22N.png,Image/Light/22Y.png,Image/Light/22R.png	22度
+Image	TH65_49T_W49R_2		軌道回路表示灯	TH65_49T	TH65_W49	R					1662	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49R_3		軌道回路表示灯	TH65_49T	TH65_W49	R					1770	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_49T_W49R_4		軌道回路表示灯	TH65_49T	TH65_W49	R					1878	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_ET_1		軌道回路表示灯	TH65_ET							1792	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_ET_2		軌道回路表示灯	TH65_ET							1842	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50イT_W50イN_1		軌道回路表示灯	TH65_50イT	TH65_W50	N					1959	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50イT_W50イN_2		軌道回路表示灯	TH65_50イT	TH65_W50	N					2025	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50イT_W50イR_1		軌道回路表示灯	TH65_50イT	TH65_W50	R					1959	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50イT_W50イR_2		軌道回路表示灯	TH65_50イT	TH65_W50	R					1983	429											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_50ロT_W50ロN_1		軌道回路表示灯	TH65_50ロT	TH65_W50	N					1959	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50ロT_W50ロN_2		軌道回路表示灯	TH65_50ロT	TH65_W50	N					2025	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_50ロT_W50ロR_1		軌道回路表示灯	TH65_50ロT	TH65_W50	R					2003	449											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	TH65_50ロT_W50ロR_2		軌道回路表示灯	TH65_50ロT	TH65_W50	R					2025	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_XT_1		軌道回路表示灯	TH65_XT							2142	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_XT_2		軌道回路表示灯	TH65_XT							2300	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_YT_1		軌道回路表示灯	TH65_YT							2142	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH65_YT_2		軌道回路表示灯	TH65_YT							2300	471											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	DF1T_1		方向てこ表示灯	DF1T					TH65_14F	N	2419	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	DF1T_2		方向てこ表示灯	DF1T					TH65_14F	N	2479	411											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	DF1T_14L_1		方向てこ表示灯	DF1T					TH65_14F	L	2420	388											0,1,2	0		Image/Light/45N.png,Image/Light/45Y.png,Image/Light/45R.png	45度
+Image	DF1T_14L_2		方向てこ表示灯	DF1T					TH65_14F	L	2420	430											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	DF1T_14R_1		方向てこ表示灯	DF1T					TH65_14F	R	2480	388											0,1,2	0		Image/Light/135N.png,Image/Light/135Y.png,Image/Light/135R.png	135度
+Image	DF1T_14R_2		方向てこ表示灯	DF1T					TH65_14F	R	2480	430											0,1,2	0		Image/Light/45N.png,Image/Light/45Y.png,Image/Light/45R.png	45度
+Image	DF2T_1		軌道回路表示灯	DF2T							2207	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_21T_W21N_1		軌道回路表示灯	TH64_21T	TH64_W21	N					2232	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_21T_W21N_2		軌道回路表示灯	TH64_21T	TH64_W21	N					2264	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_21T_W21R_1		軌道回路表示灯	TH64_21T	TH64_W21	R					2232	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_21T_W21R_2		軌道回路表示灯	TH64_21T	TH64_W21	R					2254	246											0,1,2	0		Image/Light/68N.png,Image/Light/68Y.png,Image/Light/68R.png	68度
+Image	TH64_12LT_1		軌道回路表示灯	TH64_12LT							2289	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_13LT_1		軌道回路表示灯	TH64_13LT							2289	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_12RT_1		軌道回路表示灯	TH64_12RT							2318	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_12RT_2		軌道回路表示灯	TH64_12RT							2400	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_15LT_1		軌道回路表示灯	TH64_15LT							2318	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_15LT_2		軌道回路表示灯	TH64_15LT							2400	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_14RT_1		軌道回路表示灯	TH64_14RT							2429	231											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_15RT_1		軌道回路表示灯	TH64_15RT							2429	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_22T_W22N_1		軌道回路表示灯	TH64_22T	TH64_W22	N					2454	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_22T_W22N_2		軌道回路表示灯	TH64_22T	TH64_W22	N					2484	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	TH64_22T_W22R_1		軌道回路表示灯	TH64_22T	TH64_W22	R					2466	246											0,1,2	0		Image/Light/112N.png,Image/Light/112Y.png,Image/Light/112R.png	112度
+Image	TH64_22T_W22R_2		軌道回路表示灯	TH64_22T	TH64_W22	R					2484	291											0,1,2	0		Image/Light/0N.png,Image/Light/0Y.png,Image/Light/0R.png	
+Image	転てつ不良_R		状態表示灯	TH65_W-FAILURE							164	45											0,1	0		Image/Light/N.png,Image/Light/R.png	
+Image	停電_R		状態表示灯	TH65_PWR-FAILURE							222	45											0,1	0		Image/Light/N.png,Image/Light/R.png	
+Image	CTC故障_R		状態表示灯	TH65_CTC-FAILURE							280	45											0,1	0		Image/Light/N.png,Image/Light/R.png	
+Image	鎖錠60秒_R		状態表示灯	TH65_60TEK							1256	927											0,1	0		Image/Light/N.png,Image/Light/R.png	
+Image	鎖錠30秒_R		状態表示灯	TH65_30TEK							1294	927											0,1	0		Image/Light/N.png,Image/Light/R.png	
+Retsuban	列番江ノ原信号場13番線		列車番号	TH66S_TTC_Track13							24	227														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番江ノ原信号場上り第1接近		列車番号	TH66S_TTC_Up1							24	273														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番上り第2接近		列車番号	TH65_TTC_Up2							174	273														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番上り第1接近		列車番号	TH65_TTC_Up1							324	273														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番上り場内		列車番号	TH65_TTC_UpArr1							511	333														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番1番線		列車番号	TH65_TTC_Track1							816	400														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番2番線		列車番号	TH65_TTC_Track2							816	460														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番3番線		列車番号	TH65_TTC_Track3							816	520														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番4番線		列車番号	TH65_TTC_Track4							816	634														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番E線		列車番号	TH65_TTC_TrackE							1757	507														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番X線		列車番号	TH65_TTC_TrackX							2161	400														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番Y線		列車番号	TH65_TTC_TrackY							2161	460														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番下り場内3番		列車番号	TH65_TTC_DownArr1							1226	554														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番下り場内4番		列車番号	TH65_TTC_DownArr2							1226	668														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番下り第1接近		列車番号	TH65_TTC_Down1							2105	573														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番下り第2接近		列車番号	TH65_TTC_Down2							2255	573														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番藤江1番線		列車番号	TH64_TTC_Track1							2405	527														Image/Retsuban/Retsuban-Window.png	
+Retsuban	列番藤江2番線		列車番号	TH64_TTC_Track2							2405	573														Image/Retsuban/Retsuban-Window.png	

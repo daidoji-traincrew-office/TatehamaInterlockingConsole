@@ -11,7 +11,7 @@ namespace TatehamaInterlockingConsole.Models
         public static bool IsDebug { get; } = true; // 本番環境では false
 
         /// <summary>
-        /// SignalRサーバーアドレス
+        /// ダミーURL（IsDebug=trueのため実際には接続しない）
         /// </summary>
         public static string SignalAddress { get; } = "https://localhost:5001"; // 実際のサーバーURL
     }
