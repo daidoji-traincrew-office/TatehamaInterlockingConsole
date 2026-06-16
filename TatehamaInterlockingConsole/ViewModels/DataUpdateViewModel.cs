@@ -840,21 +840,43 @@ namespace TatehamaInterlockingConsole.ViewModels
                 // 信号機データを取得
                 var signals = DatabaseOperational.Instance.Signals;
 
-                // 信号機表示灯のみを抽出
+                // Todo: 暫定実装、図のほうがちゃんと対応されたら実装を戻す
+                // 複数の信号機が組み合わさって1つの表示灯を制御する複合信号の定義
+                // キー: 表示灯の ServerName, 値: 両方が Phase != R のときに点灯させる信号名リスト
+                var compositeSignalMap = new System.Collections.Generic.Dictionary<string, string[]>
+                {
+                    { "大道寺上り場内1R", new[] { "大道寺上り場内1RTA", "大道寺上り場内1RTB" } }
+                };
+
+                // 信号機表示灯のみを抽出（通常の信号 + 複合信号の表示灯を含む）
                 var relevantSettings = activeStationSettingList.Where(item =>
                     item.ServerType == "信号機表示灯" &&
-                    signals.Any(s => s.Name == item.ServerName)
+                    (signals.Any(s => s.Name == item.ServerName) ||
+                     compositeSignalMap.ContainsKey(item.ServerName))
                 ).ToList();
 
                 foreach (var item in relevantSettings)
                 {
-                    // コントロールと一致する信号機情報のみ抽出
-                    var signal = signals.FirstOrDefault(s => s.Name == item.ServerName);
-
-                    if (signal != null)
+                    if (compositeSignalMap.TryGetValue(item.ServerName, out var componentNames))
                     {
-                        // 進行信号
-                        item.ImageIndex = signal.Phase != EnumData.Phase.R ? 1 : 0;
+                        // 複合信号: 構成する全信号が Phase != R のとき点灯
+                        bool allOpen = componentNames.All(name =>
+                        {
+                            var sig = signals.FirstOrDefault(s => s.Name == name);
+                            return sig != null && sig.Phase != EnumData.Phase.R;
+                        });
+                        item.ImageIndex = allOpen ? 1 : 0;
+                    }
+                    else
+                    {
+                        // コントロールと一致する信号機情報のみ抽出
+                        var signal = signals.FirstOrDefault(s => s.Name == item.ServerName);
+
+                        if (signal != null)
+                        {
+                            // 進行信号
+                            item.ImageIndex = signal.Phase != EnumData.Phase.R ? 1 : 0;
+                        }
                     }
                 }
 
