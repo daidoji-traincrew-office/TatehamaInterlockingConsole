@@ -421,8 +421,8 @@ namespace TatehamaInterlockingConsole.ViewModels
                 item.ImageIndex = trackCircuit?.On == true ? 2 : 1;
             }
         }
-        
-         /// <summary>
+
+        /// <summary>
         /// 駅扱切換表示灯の更新処理
         /// </summary>
         /// <param name="item"></param>
