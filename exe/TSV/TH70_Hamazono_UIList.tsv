@@ -85,8 +85,8 @@ Image	117T_1		軌道回路表示灯	下り117T							1377	394											"0,1,2"	0		"Image
 Image	転てつ不良_R		状態表示灯	TH70_W-FAILURE							64	45											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
 Image	停電_R		状態表示灯	TH70_PWR-FAILURE							122	45											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
 Image	CTC故障_R		状態表示灯	TH70_CTC-FAILURE							180	45											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
-Image	鎖錠60秒_R		状態表示灯	TH70_60TEK							734	567											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
-Image	鎖錠30秒_R		状態表示灯	TH70_30TEK							696	567											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
+Image	鎖錠60秒_R		状態表示灯	TH70_60TEK							696	567											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
+Image	鎖錠30秒_R		状態表示灯	TH70_30TEK							734	567											"0,1"	0		"Image/Light/N.png,Image/Light/R.png"									
 Retsuban	列番津崎上り第1接近		列車番号	TH71_TTC_Up1							24	196														Image/Retsuban/Retsuban-Window.png									
 Retsuban	列番津崎1番線		列車番号	TH71_TTC_Track1							174	150														Image/Retsuban/Retsuban-Window.png									
 Retsuban	列番津崎2番線		列車番号	TH71_TTC_Track2							174	196														Image/Retsuban/Retsuban-Window.png									
