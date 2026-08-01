@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using OpenIddict.Client;
+using TatehamaInterlockingConsole.Config;
 using TatehamaInterlockingConsole.Factories;
 using TatehamaInterlockingConsole.Handlers;
 using TatehamaInterlockingConsole.Manager;
@@ -157,7 +158,7 @@ namespace TatehamaInterlockingConsole.ViewModels
                     VolumeText = $"音量: {Volume}%";
 
                     // サーバー種類の設定
-                    ServerType = ServerAddress.SignalAddress.Contains("dev") ? "Dev" : "Prod";
+                    ServerType = EnvironmentDefinition.Current.ShortName;
                 }
             }
             catch (Exception ex)

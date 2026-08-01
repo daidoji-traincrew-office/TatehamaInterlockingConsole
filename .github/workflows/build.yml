@@ -58,23 +58,27 @@ jobs:
     strategy:
       matrix:
         standalone: [ false, true ]
-        dev: [ false, true ]
     steps:
       - name: Set Zip File Name
         # ZIP_FILE_NAMEは、ビルドしたアプリケーションのファイル名を指定するための環境変数。ソフトによって変えると良さげ
         run: |
           version=$(echo "${{ needs.calc_version.outputs.VERSION }}" | sed 's/\./_/g')
-          echo "ZIP_FILE_NAME=${{ env.APP_NAME }}_${version}${{ (matrix.dev && '-dev') || ''}}${{ (matrix.standalone && '-standalone') || '' }}.zip" >> $GITHUB_ENV
+          echo "ZIP_FILE_NAME=${{ env.APP_NAME }}_${version}${{ (matrix.standalone && '-standalone') || '' }}.zip" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Write ServerAddress.cs
         run: |
-          if [ "${{ matrix.dev }}" = "true" ]; then
-            SERVER_ADDRESS=${{ secrets.SERVER_ADDRESS_DEV }}
-          else
-            SERVER_ADDRESS=${{ secrets.SERVER_ADDRESS }}
-          fi
-          echo "namespace ${{ env.NAMESPACE }}; public static class ServerAddress { public const string SignalAddress = \"${SERVER_ADDRESS}\"; public static bool IsDebug = false;}" > ./TatehamaInterlockingConsole/ServerAddress.cs
+          cat <<EOF > ./TatehamaInterlockingConsole/ServerAddress.cs
+          namespace ${{ env.NAMESPACE }};
+          public static class ServerAddress
+          {
+              public const string LocalUrl = "https://localhost:5000";
+              public const string DevelopmentUrl = "${{ secrets.SERVER_ADDRESS_DEV }}";
+              public const string ProductionUrl = "${{ secrets.SERVER_ADDRESS }}";
+              public static string SignalAddress { get; set; } = "";
+              public static bool IsDebug { get; set; } = false;
+          }
+          EOF
       - name: Setup dotnet 8.0.x
         uses: actions/setup-dotnet@v4.3.1
         with:

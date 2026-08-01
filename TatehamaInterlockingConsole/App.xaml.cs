@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using OpenIddict.Client;
+using TatehamaInterlockingConsole.Config;
 using TatehamaInterlockingConsole.Manager;
 using TatehamaInterlockingConsole.Services;
 using TatehamaInterlockingConsole.ViewModels;
@@ -22,6 +23,48 @@ namespace TatehamaInterlockingConsole
         {
             base.OnStartup(e);
 
+            // 1. 環境選択(コマンドライン引数 or ダイアログ)
+            EnvironmentType selectedEnvironment;
+            string customLocalUrl = null;
+
+            if (e.Args.Length > 0 && Enum.TryParse<EnvironmentType>(e.Args[0], true, out var envFromArgs))
+            {
+                selectedEnvironment = envFromArgs;
+                // Local環境でURLが指定されている場合
+                if (selectedEnvironment == EnvironmentType.Local && e.Args.Length > 1)
+                {
+                    customLocalUrl = e.Args[1];
+                }
+            }
+            else
+            {
+                // MainWindowがまだ存在しないため、ダイアログを閉じただけで
+                // アプリが終了しないようにシャットダウンモードを一時的に変更する
+                var previousShutdownMode = ShutdownMode;
+                ShutdownMode = ShutdownMode.OnExplicitShutdown;
+
+                var selectWindow = new EnvironmentSelectWindow();
+                var result = selectWindow.ShowDialog();
+
+                ShutdownMode = previousShutdownMode;
+
+                if (result != true)
+                {
+                    Shutdown();
+                    return;
+                }
+
+                selectedEnvironment = selectWindow.SelectedEnvironment;
+                customLocalUrl = selectWindow.CustomLocalUrl;
+            }
+
+            // 2. ServerAddressクラスを初期化
+            EnvironmentDefinition.Initialize(selectedEnvironment, customLocalUrl);
+
+            // 3. 環境別のトークンDBファイル名を生成(環境間でトークンが混在しないようにする)
+            var envName = selectedEnvironment.ToString().ToLower();
+            var dbFileName = $"trancrew-multiats-console-{envName}.sqlite3";
+
             // IHostの初期化
             _host = new HostBuilder()
                 .ConfigureLogging(options => options.AddDebug())
@@ -31,7 +74,7 @@ namespace TatehamaInterlockingConsole
                     services.AddDbContext<DbContext>(options =>
                     {
                         options.UseSqlite(
-                            $"Filename={Path.Combine(Path.GetTempPath(), "trancrew-multiats-client.sqlite3")}");
+                            $"Filename={Path.Combine(Path.GetTempPath(), dbFileName)}");
                         options.UseOpenIddict();
                     });
 
