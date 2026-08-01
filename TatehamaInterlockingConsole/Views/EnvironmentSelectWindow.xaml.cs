@@ -42,6 +42,8 @@ namespace TatehamaInterlockingConsole.Views
                 return;
             }
 
+            var radioStyle = (Style)FindResource("EnvironmentRadioButtonStyle");
+
             bool isFirst = true;
             foreach (var env in availableEnvironments)
             {
@@ -49,9 +51,7 @@ namespace TatehamaInterlockingConsole.Views
                 {
                     Content = env.DisplayName,  // URLではなく環境名のみ表示
                     Tag = env.Type,
-                    Foreground = System.Windows.Media.Brushes.White,
-                    FontSize = 14,
-                    Margin = new Thickness(0, 5, 0, 5),
+                    Style = radioStyle,
                     IsChecked = isFirst  // 最初の環境をデフォルト選択
                 };
                 radioButton.Checked += RadioButton_Checked;
@@ -64,6 +64,7 @@ namespace TatehamaInterlockingConsole.Views
                 }
             }
 
+            LocalUrlTextBox.Text = ServerAddress.LocalUrl;
             UpdateLocalUrlVisibility();
         }
 
@@ -80,10 +81,6 @@ namespace TatehamaInterlockingConsole.Views
         {
             bool isLocal = _selectedEnvironment == EnvironmentType.Local;
             LocalUrlPanel.Visibility = isLocal ? Visibility.Visible : Visibility.Collapsed;
-            if (isLocal && string.IsNullOrEmpty(LocalUrlTextBox.Text))
-            {
-                LocalUrlTextBox.Text = ServerAddress.LocalUrl;
-            }
         }
 
         private void ConnectButton_Click(object sender, RoutedEventArgs e)

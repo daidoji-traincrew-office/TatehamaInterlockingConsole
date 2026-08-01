@@ -4,14 +4,96 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
-        Title="環境選択"
+        Title="環境選択 | 連動盤 - ダイヤ運転会"
         Width="400" Height="280"
+        FontFamily="Yu Gothic UI" FontSize="9"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Background="#FF4C6666"
-        WindowStyle="SingleBorderWindow">
+        Background="#FF4C6666">
 
-    <Grid Margin="20">
+    <Window.Resources>
+        <!-- ボタン型ラジオボタン(環境選択) : 未選択=White, 選択=Gold, ホバー=Khaki, 押下=DarkKhaki -->
+        <Style x:Key="EnvironmentRadioButtonStyle" TargetType="RadioButton">
+            <Setter Property="FontFamily" Value="BIZ UDゴシック"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Height" Value="36"/>
+            <Setter Property="Margin" Value="0,0,0,8"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="border" Background="White" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Gold"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Khaki"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkKhaki"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- 接続ボタン : Lime、ホバー/押下=White、枠なし -->
+        <Style x:Key="ConnectButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="BIZ UDゴシック"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="Lime" BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- キャンセルボタン : White、ホバー=Khaki、押下=DarkKhaki、黒枠 -->
+        <Style x:Key="CancelButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="BIZ UDゴシック"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="White" BorderBrush="Black" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Khaki"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="DarkKhaki"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="30,20,30,20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -21,20 +103,21 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Text="接続先環境を選択してください:"
-                   Foreground="#FFF7F7F7" FontSize="16" Margin="0,0,0,15"/>
+                   FontFamily="BIZ UDゴシック" FontSize="12" Foreground="White" Margin="0,0,0,20"/>
 
         <StackPanel Grid.Row="1" x:Name="EnvironmentPanel" Orientation="Vertical"/>
 
-        <StackPanel Grid.Row="2" x:Name="LocalUrlPanel" Orientation="Vertical" Margin="0,10,0,0" Visibility="Collapsed">
-            <TextBlock Text="ローカルURL:" Foreground="#FFF7F7F7" FontSize="14" Margin="0,0,0,5"/>
-            <TextBox x:Name="LocalUrlTextBox" Width="340" Height="24" HorizontalAlignment="Left"/>
+        <StackPanel Grid.Row="2" x:Name="LocalUrlPanel" Orientation="Vertical" Margin="0,5,0,0" Visibility="Collapsed">
+            <TextBlock Text="ローカルURL:" FontFamily="BIZ UDゴシック" FontSize="10" Foreground="White" Margin="0,0,0,3"/>
+            <TextBox x:Name="LocalUrlTextBox" Width="340" Height="23" HorizontalAlignment="Left"
+                     FontFamily="BIZ UDゴシック" FontSize="10"/>
         </StackPanel>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="ConnectButton" Content="接続" Width="90" Height="30" Margin="5,0"
-                    Click="ConnectButton_Click"/>
-            <Button x:Name="CancelButton" Content="キャンセル" Width="90" Height="30" Margin="5,0"
-                    Click="CancelButton_Click"/>
+            <Button x:Name="ConnectButton" Content="接続" Width="100" Height="30" Margin="0,0,10,0"
+                    Style="{StaticResource ConnectButtonStyle}" Click="ConnectButton_Click"/>
+            <Button x:Name="CancelButton" Content="キャンセル" Width="100" Height="30"
+                    Style="{StaticResource CancelButtonStyle}" Click="CancelButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>
