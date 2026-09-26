@@ -9,7 +9,7 @@ Image	4L_G		信号機表示灯	江ノ原信号場下り出発4L							1273	702											"0,1"	0
 Image	5LD_G		信号機表示灯	江ノ原信号場下り場内5LD							1273	820											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 Image	5LE_G		信号機表示灯	江ノ原信号場下り場内5LE							1265	838											"0,1"	0		"Image/Light/N.png,Image/Light/G.png"									
 Image	11R_Y		信号機表示灯	江ノ原信号場入換11R							816	669											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
-Image	12L_Y		信号機表示灯								880	671											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
+Image	12L_Y		信号機表示灯	江ノ原信号場入換12L							880	671											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 Image	13R_Y		信号機表示灯	江ノ原信号場入換13R							1146	661											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 Image	14R_Y		信号機表示灯								1240	601											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
 Image	15L_Y		信号機表示灯	江ノ原信号場入換15L							1291	603											"0,1"	0		"Image/Light/N.png,Image/Light/Y.png"									
