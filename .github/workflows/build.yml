@@ -116,6 +116,7 @@ jobs:
     name: "Create New Release"
     permissions:
       contents: write
+      actions: write
     needs:
       - calc_version
       - build
@@ -131,4 +132,11 @@ jobs:
         with:
           tag_name: ${{ needs.calc_version.outputs.VERSION }}
           make_latest: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-          files: out/* 
+          files: out/*
+      # Releaseに添付済みのため、ストレージ節約のためArtifactは削除する
+      - name: Delete Artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" --paginate --jq '.artifacts[].id' \
+            | xargs -r -I{} gh api -X DELETE "repos/${{ github.repository }}/actions/artifacts/{}"
